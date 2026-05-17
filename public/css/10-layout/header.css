@@ -186,3 +186,15 @@
   font-weight: 700;
   white-space: nowrap;
 }
+/* Public-ready header safeguards */
+.header-brand {
+  flex: 0 0 auto;
+}
+
+.header-cta {
+  flex: 0 0 auto;
+}
+
+.main-nav {
+  min-width: 0;
+}
