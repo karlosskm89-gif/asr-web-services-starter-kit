@@ -1,0 +1,30 @@
+<%
+  const projects = builder?.projects || [];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Our Work",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.portfolioDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "portfolio",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>Our Work</h1>
+    <p>A selection of recent projects.</p>
+
+    <div class="grid project-grid">
+      ${projects.map(p => `
+        <div class="project-card">
+          <img src="${p.image || "/assets/img/placeholder.webp"}" alt="${p.title}">
+          <h3>${p.title}</h3>
+          <p>${p.description || ""}</p>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+</section>
+`
+}) %>

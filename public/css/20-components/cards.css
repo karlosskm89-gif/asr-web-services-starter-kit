@@ -1,0 +1,51 @@
+/* ============================================
+   Card-style components & content panels
+   ============================================ */
+
+/* Generic card */
+.card {
+  border: 1px solid var(--asr-grey-medium);
+  padding: 1rem;
+  border-radius: 4px;
+  background: var(--asr-white);
+}
+
+/* Trust & quote panels */
+.trust-panel {
+  border-radius: 6px;
+  border: 1px solid var(--asr-grey-medium);
+  background: #f9fafb;
+}
+
+.quote-panel {
+  border-radius: 6px;
+  border: 1px solid var(--asr-gold);
+  background: var(--asr-white);
+}
+
+/* ASR-style quote text */
+.asr-quote {
+  font-style: italic;
+  color: var(--asr-blue);
+}
+
+/* Small subtitle under service names on home & elsewhere */
+.service-subtitle {
+  font-size: 0.95rem;
+  color: var(--asr-grey-dark);
+}
+
+/* Testimonial block (case studies / portfolio) */
+.section-testimonial blockquote.testimonial {
+  border-left: 4px solid #3E2A6B;
+  padding-left: 1rem;
+  font-style: italic;
+  background: var(--asr-parchment-deep);
+  border-radius: 4px;
+}
+
+.section-testimonial footer {
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+}

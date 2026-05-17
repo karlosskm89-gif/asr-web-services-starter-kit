@@ -1,0 +1,28 @@
+/* Slightly more rugged / construction feel */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 4px solid rgba(255, 166, 0, 0.3);
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.btn.primary {
+  border-radius: 0;
+  font-weight: 600;
+}
+
+/* Cards (services, projects, testimonials) */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}

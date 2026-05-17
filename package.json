@@ -1,0 +1,28 @@
+{
+  "name": "asr-web-services-starter-kit",
+  "version": "1.0.0",
+  "description": "Public-safe Express/EJS starter kit for service-business websites and operational workflow demos.",
+  "main": "app.js",
+  "scripts": {
+    "test_echo": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "test": "node --test",
+    "new-profile": "node scripts/newProfile.js"
+  },
+  "keywords": [],
+  "author": "ASR Web Services",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^7.0.0",
+    "express-slow-down": "^2.0.0"
+  }
+}

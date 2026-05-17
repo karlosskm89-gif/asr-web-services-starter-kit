@@ -1,0 +1,31 @@
+<%
+  const testimonials = builder?.testimonials || [];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Testimonials",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.testimonialsDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "testimonials",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>Testimonials</h1>
+
+    <div class="testimonials-list">
+      ${testimonials.length
+        ? testimonials.map(t => `
+          <div class="testimonial">
+            <p class="quote">"${t.quote}"</p>
+            <p class="author">– ${t.author}</p>
+          </div>
+        `).join("")
+        : `<p>No testimonials available yet.</p>`
+      }
+    </div>
+  </div>
+</section>
+`
+}) %>

@@ -1,0 +1,62 @@
+/* ============================================
+   20-components/nav.css
+   Navigation pills – shared desktop & mobile
+   ============================================ */
+
+/* 20-components/nav.css — uniform nav pills globally */
+
+/* You can tweak this one value to change pill length */
+:root { --nav-pill-width: 9.5rem; } /* ≈ 152px; use 8.75rem for ~140px */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Base pill */
+.site-nav a {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--nav-pill-width);   /* ✅ uniform */
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+
+  color: var(--asr-white);
+  border: 1px solid transparent;
+  transition: background .2s, color .2s, border-color .2s, transform .1s;
+}
+
+/* Gold outlined style */
+.site-nav .nav-cta {
+  border-color: var(--asr-gold);
+}
+
+/* Hover / focus */
+.site-nav a:hover,
+.site-nav a:focus-visible { color: var(--asr-gold); }
+
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta:focus-visible {
+  background: rgba(244,197,41,.12);
+  border-color: var(--asr-gold);
+}
+
+/* Active/current page (optional) */
+.site-nav a[aria-current="page"],
+.site-nav a.is-active {
+  background: var(--asr-gold);
+  color: var(--asr-blue);
+  border-color: var(--asr-gold);
+}
+
+/* Tiny press feedback */
+.site-nav a:active { transform: translateY(1px); }

@@ -1,0 +1,66 @@
+/* ============================================
+   Scroll Cards (Services Compare – mobile)
+   ============================================ */
+
+/* Hidden by default; shown in responsive-compare.css for mobile */
+.scroll-cards {
+  display: none;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* Individual scroll card */
+.scroll-card {
+  border-radius: 8px;
+  border: 1px solid var(--asr-grey-medium);
+  background: var(--asr-parchment-deep);
+  padding: 1rem 1.1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.scroll-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--asr-blue);
+}
+
+.scroll-card-tagline {
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  color: var(--asr-grey-dark);
+}
+
+/* Feature list inside a scroll card */
+.scroll-card-features {
+  margin: 0 0 0.75rem;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.scroll-card-features li {
+  margin-bottom: 0.25rem;
+}
+
+/* Price line */
+.scroll-card-price {
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+/* Subtle accent differences per scroll */
+.scroll-card--starter {
+  border-color: var(--asr-grey-medium);
+}
+
+.scroll-card--hearth {
+  border-color: var(--asr-gold);
+}
+
+.scroll-card--artisan {
+  border-color: var(--asr-blue);
+}
+
+.scroll-card--guildhall,
+.scroll-card--fellowship {
+  border-color: var(--asr-red);
+}

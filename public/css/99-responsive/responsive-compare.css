@@ -1,0 +1,26 @@
+/* ============================================
+   Services Compare – responsive behaviour
+   ============================================ */
+
+/* Phones & small tablets – use scroll cards instead of grid */
+@media (max-width: 992px) {
+  /* Hide the entire desktop compare section */
+  #services-compare .section-compare-table {
+    display: none !important;
+  }
+
+  /* Extra safety for any grids/tables inside */
+  #services-compare .compare-grid,
+  #services-compare .compare-table,
+  #services-compare table {
+    display: none !important;
+  }
+
+  /* Enable scroll cards */
+  #services-compare .scroll-cards {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,30 @@
+<%
+  const services = builder?.services || [];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Our Services",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.servicesDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "services",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>Our Services</h1>
+    <p>We offer a wide range of professional services.</p>
+
+    <div class="grid services-grid">
+      ${services.map(s => `
+        <div class="service-card">
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+</section>
+`
+}) %>
+

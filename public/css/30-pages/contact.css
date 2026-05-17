@@ -1,0 +1,10 @@
+/* ============================================
+   Contact page specifics
+   ============================================ */
+
+.contact-card img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--asr-grey-medium);
+  border-radius: 6px;
+}

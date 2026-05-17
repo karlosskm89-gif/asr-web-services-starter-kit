@@ -1,0 +1,17 @@
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Server Error",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "",
+  body: `
+<section class="section">
+  <div class="container text-center">
+    <h1>Something went wrong</h1>
+    <p>Please try again later.</p>
+    <a href="/" class="btn primary">Return Home</a>
+  </div>
+</section>
+`
+}) %>

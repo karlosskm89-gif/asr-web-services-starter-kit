@@ -1,0 +1,94 @@
+<%
+  function escAttr(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  const oldValues = old || {};
+  const errors = validationErrors || [];
+
+  function fieldError(path) {
+    return errors.find(function (e) { return e.path === path; });
+  }
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Contact Us",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.contactDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "contact",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Use the form below and we'll get back to you shortly.</p>
+
+    <form method="POST" action="/contact">
+      <input type="hidden" name="_csrf" value="${escAttr(typeof csrfToken !== "undefined" ? csrfToken : "")}" />
+
+      <div class="form-group">
+        <label for="contact-name">Your Name</label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          value="${escAttr(oldValues.name)}"
+        >
+        ${
+          fieldError("name")
+            ? `<p class="error">${escAttr(fieldError("name").msg)}</p>`
+            : ""
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          value="${escAttr(oldValues.email)}"
+        >
+        ${
+          fieldError("email")
+            ? `<p class="error">${escAttr(fieldError("email").msg)}</p>`
+            : ""
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="contact-phone">Phone</label>
+        <input
+          id="contact-phone"
+          type="text"
+          name="phone"
+          value="${escAttr(oldValues.phone)}"
+        >
+        ${
+          fieldError("phone")
+            ? `<p class="error">${escAttr(fieldError("phone").msg)}</p>`
+            : ""
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="contact-details">Message</label>
+        <textarea
+          id="contact-details"
+          name="details"
+          rows="5"
+        >${escAttr(oldValues.details)}</textarea>
+      </div>
+
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </div>
+</section>
+`
+}) %>

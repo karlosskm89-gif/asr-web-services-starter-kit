@@ -1,0 +1,17 @@
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Page Not Found",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "",
+  body: `
+<section class="section">
+  <div class="container text-center">
+    <h1>404</h1>
+    <p>The page you're looking for cannot be found.</p>
+    <a href="/" class="btn primary">Return Home</a>
+  </div>
+</section>
+`
+}) %>

@@ -1,0 +1,38 @@
+<%
+  // Ensure we have some sane defaults
+  const siteName = builder?.businessName || "Website";
+  const pageTitle = title || siteName;
+  const pageDescription = metaDescription || "";
+
+  const meta = extraMeta || {};
+  const ogType = meta.type || "website";
+  const ogUrl = meta.url || "";
+  const twitterCard = meta.card || "summary_large_image";
+
+  // Choose an image: explicit extraMeta.image, or builder.seo.globalImage
+  const seoConfig = builder && builder.seo ? builder.seo : {};
+  const ogImage = meta.image || seoConfig.globalImage || "";
+%>
+
+<title><%= pageTitle %></title>
+<meta name="description" content="<%= pageDescription %>" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="<%= pageTitle %>" />
+<meta property="og:description" content="<%= pageDescription %>" />
+<meta property="og:type" content="<%= ogType %>" />
+<% if (ogUrl) { %>
+<meta property="og:url" content="<%= ogUrl %>" />
+<link rel="canonical" href="<%= ogUrl %>" />
+<% } %>
+<% if (ogImage) { %>
+<meta property="og:image" content="<%= ogImage %>" />
+<% } %>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="<%= twitterCard %>" />
+<meta name="twitter:title" content="<%= pageTitle %>" />
+<meta name="twitter:description" content="<%= pageDescription %>" />
+<% if (ogImage) { %>
+<meta name="twitter:image" content="<%= ogImage %>" />
+<% } %>

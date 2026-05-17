@@ -1,0 +1,27 @@
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "About Us",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.aboutDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "about",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>About Us</h1>
+
+    <p>${builder?.about?.intro || "We are a professional business offering quality services."}</p>
+
+    ${builder?.about?.sections
+      ? builder.about.sections.map(sec => `
+        <div class="about-section">
+          <h2>${sec.heading}</h2>
+          <p>${sec.text}</p>
+        </div>
+      `).join("")
+      : ""
+    }
+  </div>
+</section>
+`
+}) %>

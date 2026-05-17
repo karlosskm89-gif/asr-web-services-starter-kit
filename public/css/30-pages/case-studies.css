@@ -1,0 +1,17 @@
+/* ============================================
+   Individual Case Study pages
+   ============================================ */
+
+#case-study-aid-cancer-treatment .hero-tagline,
+#case-study-forwardsteps .hero-tagline {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#case-study-forwardsteps ul {
+  margin-bottom: 1rem;
+}
+
+#case-study-forwardsteps .section-cta {
+  text-align: center;
+}

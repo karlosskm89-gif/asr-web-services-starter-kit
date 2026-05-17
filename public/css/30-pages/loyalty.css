@@ -1,0 +1,133 @@
+/* ============================================
+   ASR Loyalty (Red Book)
+   ============================================ */
+
+#loyalty-referrals {
+  background: var(--asr-parchment-deep);
+}
+
+/* Section headers */
+#loyalty-referrals h1,
+#loyalty-referrals h2 {
+  color: var(--asr-blue);
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.5px;
+}
+
+/* Taglines and quotes */
+#loyalty-referrals .service-tagline,
+#loyalty-referrals .asr-quote {
+  color: var(--asr-red);
+  font-style: italic;
+}
+
+/* Cards grid layout reuse */
+#loyalty-referrals .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Red Book tier & stamp cards */
+#loyalty-referrals .card {
+  border: 2px solid var(--asr-gold);
+  border-radius: 8px;
+  background: var(--asr-white);
+  box-shadow: 0 2px 4px rgba(28, 41, 90, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#loyalty-referrals .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(28, 41, 90, 0.1);
+}
+
+#loyalty-referrals .card h3 {
+  color: var(--asr-blue);
+  margin-top: 0;
+  border-bottom: 1px solid #f4e2a8;
+  padding-bottom: 0.25rem;
+}
+
+/* Stamp-tier badges */
+#loyalty-referrals .card h3::before {
+  content: "📜 ";
+  font-size: 1.1em;
+}
+
+/* Lists */
+#loyalty-referrals ul {
+  list-style: disc;
+  padding-left: 1.3rem;
+  color: #333;
+}
+
+#loyalty-referrals li {
+  margin-bottom: 0.3rem;
+}
+
+/* Quote panel */
+#loyalty-referrals .asr-quote {
+  border-left: 4px solid var(--asr-red);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* CTA button section */
+#loyalty-referrals .section-cta {
+  text-align: center;
+  background: var(--asr-parchment);
+  border-top: 1px solid #f4e2a8;
+  border-bottom: 1px solid #f4e2a8;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+#loyalty-referrals .section-cta .btn-primary {
+  background: var(--asr-red);
+  border: none;
+  color: var(--asr-white);
+}
+
+#loyalty-referrals .section-cta .btn-primary:hover {
+  background: #861b14;
+}
+
+/* Helper text panel */
+#loyalty-referrals .helper-text {
+  font-size: 0.9rem;
+  color: var(--asr-grey-dark);
+  background: #f9fafb;
+  border-left: 3px solid var(--asr-gold);
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+body#loyalty-referrals {
+  background-image: linear-gradient(180deg, #fffdf7 0%, #fffbe8 100%);
+}
+
+/* Title ribbon / parchment header */
+#loyalty-referrals .section-intro h1 {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: 'Cinzel', Georgia, serif;
+  background: linear-gradient(90deg, var(--asr-gold) 0%, #fffbe8 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(28, 41, 90, 0.1);
+}
+
+#loyalty-referrals .section-intro h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: var(--asr-red);
+  border-radius: 2px;
+  opacity: 0.8;
+}

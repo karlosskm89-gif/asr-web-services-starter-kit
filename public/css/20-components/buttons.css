@@ -1,0 +1,48 @@
+/* ============================================
+   Buttons & CTAs
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* Primary – red pill */
+.btn-primary {
+  background: var(--asr-red);
+  color: var(--asr-white);
+  border-color: var(--asr-red);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--asr-red-dark);
+  border-color: var(--asr-red-dark);
+}
+
+/* Secondary – blue outline */
+.btn-secondary {
+  border: 1px solid var(--asr-blue);
+  color: var(--asr-blue);
+  background: transparent;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--asr-blue);
+  color: var(--asr-white);
+}
+
+/* Section CTA wrapper (used on several pages) */
+.section-cta {
+  text-align: center;
+  background: var(--asr-parchment);
+  border: 1px solid #f4e2a8; /* slightly softer gold frame */
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+}

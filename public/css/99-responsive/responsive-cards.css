@@ -1,0 +1,23 @@
+/* ============================================
+   Card-like elements responsiveness
+   ============================================ */
+
+/* <= 768px: adjust section padding & hero buttons */
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem 0.75rem;
+  }
+
+  .hero,
+  .hero-asr {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

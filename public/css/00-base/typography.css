@@ -1,0 +1,34 @@
+/* ============================================
+   Typography & global body defaults
+   ============================================ */
+
+body {
+  font-family: Calibri, Cambria, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--asr-blue);
+  background: var(--asr-white);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--asr-blue);
+}
+
+/* Helper text */
+.helper-text {
+  font-size: 0.9rem;
+  color: var(--asr-grey-dark);
+  margin-top: 0.75rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

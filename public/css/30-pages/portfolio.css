@@ -1,0 +1,19 @@
+/* ============================================
+   Portfolio overview and generic case cards
+   ============================================ */
+
+#portfolio .case-card .case-tagline {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+#portfolio .case-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+#portfolio .case-meta li {
+  margin-bottom: 0.25rem;
+}

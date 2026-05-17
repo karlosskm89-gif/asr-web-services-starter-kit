@@ -1,0 +1,32 @@
+/* Softer, “supportive professional” vibe */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 3px solid rgba(52, 152, 219, 0.25);
+}
+
+.brand-name {
+  font-weight: 600;
+}
+
+.btn.primary {
+  border-radius: 999px;
+  padding-inline: 1.5rem;
+  font-weight: 500;
+}
+
+/* Sections */
+.section {
+  padding-block: 3rem;
+}
+
+/* Cards feel a bit more rounded */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(52, 152, 219, 0.15);
+}

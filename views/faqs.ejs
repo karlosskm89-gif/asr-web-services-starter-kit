@@ -1,0 +1,32 @@
+<%
+  const faqList = builder?.faqs || [];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "FAQs",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.faqDescription || builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "faqs",
+  body: `
+<section class="section">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-list">
+      ${
+        faqList.length
+          ? faqList.map(f => `
+            <div class="faq-item">
+              <h3>${f.q}</h3>
+              <p>${f.a}</p>
+            </div>
+          `).join("")
+          : `<p>No FAQs available yet.</p>`
+      }
+    </div>
+  </div>
+</section>
+`
+}) %>

@@ -1,0 +1,16 @@
+<%- include("./layouts/mainLayout", {
+  title: "Too many requests",
+  metaDescription: "You have sent too many requests in a short period.",
+  builder,
+  currentPath: "/contact",
+  body: `
+    <section class="page page-error">
+      <div class="page-inner">
+        <h1 class="page-title">Easy there!</h1>
+        <p>It looks like there were a lot of requests from this browser in a short time.</p>
+        <p>Please wait a little and try again. If you weren't expecting this, just retry after a short pause.</p>
+        <a href="/" class="btn btn-primary">Back to home</a>
+      </div>
+    </section>
+  `,
+}) %>

@@ -1,0 +1,188 @@
+/* ============================================================
+   ASR Header & Navigation
+   ============================================================ */
+
+.site-header {
+  background: var(--asr-red);
+  border-bottom: 3px solid var(--asr-gold);
+  padding: 0.5rem 0;
+  color: var(--asr-white);
+}
+
+.site-header .inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.asr_logo {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
+/* --- Desktop nav --- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--asr-white);
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--asr-gold);
+}
+
+.nav-cta {
+  font-weight: 600;
+  border: 1px solid var(--asr-gold);
+  border-radius: 999px;
+}
+
+/* --- Mobile nav toggle (hidden on desktop) --- */
+.nav-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font: inherit;
+  color: var(--asr-white);
+}
+
+/* Hamburger icon */
+.nav-toggle__icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle__icon::before { top: -6px; }
+.nav-toggle__icon::after  { top:  6px; }
+
+/* X icon when active */
+.nav-toggle.is-active .nav-toggle__icon {
+  background: transparent;
+}
+
+.nav-toggle.is-active .nav-toggle__icon::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.is-active .nav-toggle__icon::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+/* Defensive: ensure no quotes appear around Menu text */
+
+.nav-toggle__text::before,
+.nav-toggle__text::after {
+  content: none !important;
+}
+
+
+/* Current starter-kit header */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 76px;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--asr-white);
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: var(--asr-white);
+  padding: 0.15rem;
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1.2;
+}
+
+.brand-name {
+  color: var(--asr-white);
+  font-weight: 800;
+}
+
+.brand-area {
+  color: var(--asr-gold-light);
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.65rem;
+}
+
+.main-nav a {
+  color: var(--asr-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--asr-gold);
+}
+
+.header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.35rem;
+  background: var(--asr-gold-light);
+  color: var(--asr-blue);
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+}

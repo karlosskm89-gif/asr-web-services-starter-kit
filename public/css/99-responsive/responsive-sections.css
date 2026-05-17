@@ -1,0 +1,22 @@
+/* ============================================
+   Misc responsive tweaks (forms, buttons)
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Contact + quote forms – full width */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    max-width: 100%;
+  }
+
+  .quote-form {
+    max-width: 100%;
+  }
+
+  /* Make CTA buttons comfy tap targets */
+  .btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

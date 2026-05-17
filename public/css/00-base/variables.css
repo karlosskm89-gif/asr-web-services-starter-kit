@@ -1,0 +1,23 @@
+/* ============================================
+   ASR Design Tokens – Colours Only
+   ============================================ */
+
+:root {
+  --asr-red: #A4291E;
+  --asr-red-dark: #872017;
+
+  --asr-blue: #1C295A;
+  --asr-blue-light: #3F4A7A;
+
+  --asr-gold: #F4C529;
+  --asr-gold-light: #fff8e0;
+
+  --asr-grey-light: #f8f8f8;
+  --asr-grey-medium: #e3e3e3;
+  --asr-grey-dark: #555;
+
+  --asr-parchment: #fffbe8;
+  --asr-parchment-deep: #fffdf7;
+
+  --asr-white: #ffffff;
+}

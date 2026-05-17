@@ -1,0 +1,17 @@
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "Message Sent",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "",
+  body: `
+<section class="section">
+  <div class="container text-center">
+    <h1>Thank You!</h1>
+    <p>Your message has been sent successfully. We'll be in touch soon.</p>
+    <a href="/" class="btn primary">Return Home</a>
+  </div>
+</section>
+`
+}) %>

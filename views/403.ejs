@@ -1,0 +1,16 @@
+<%- include("./layouts/mainLayout", {
+  title: "Form expired",
+  metaDescription: "Your form token is no longer valid. Please try again.",
+  builder,
+  currentPath: "/contact",
+  body: `
+    <section class="page page-error">
+      <div class="page-inner">
+        <h1 class="page-title">Form expired</h1>
+        <p>Your form session is no longer valid. This can happen if the page was open for a long time or the form was submitted from an old tab.</p>
+        <p>Please go back to the contact page and submit the form again.</p>
+        <a href="/contact" class="btn btn-primary">Back to contact page</a>
+      </div>
+    </section>
+  `,
+}) %>

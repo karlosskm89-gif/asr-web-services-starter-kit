@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><%= title || builder?.businessName || "Website" %></title>
+  <meta
+    name="description"
+    content="<%= typeof metaDescription !== 'undefined' ? metaDescription : '' %>"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/index.css" />
+
+  <!-- Optional module-specific CSS -->
+<% if (typeof pageCss !== "undefined" && pageCss) { %>
+  <link rel="stylesheet" href="<%= pageCss %>">
+<% } %>
+</head>
+<body class="
+  profile-<%= builder?._profileKey || 'default' %>
+  theme-<%= builder?.themeKey || 'default' %>
+">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="/" class="brand-link">
+          <% if (builder?.brandLogo) { %>
+            <img class="brand-logo" src="<%= builder.brandLogo %>" alt="<%= builder?.businessName || 'Business' %> logo">
+          <% } %>
+          <span class="brand-text">
+            <span class="brand-name"><%= builder?.businessName || "Your Business Name" %></span>
+            <% if (builder?.area) { %>
+              <span class="brand-area"><%= builder.area %></span>
+            <% } %>
+          </span>
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/" class="<%= currentPath === 'home' ? 'active' : '' %>">Home</a>
+        <a href="/about" class="<%= currentPath === 'about' ? 'active' : '' %>">About</a>
+        <a href="/services" class="<%= currentPath === 'services' ? 'active' : '' %>">Services</a>
+        <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
+        <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Testimonials</a>
+        <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
+        <a href="/contact" class="<%= currentPath === 'contact' ? 'active' : '' %>">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <% if (builder?.phone) { %>
+          <a class="header-phone" href="tel:<%= builder.phone %>">
+            Call: <%= builder.phone %>
+          </a>
+        <% } else if (builder?.ctaButtonText) { %>
+          <a class="header-button" href="/contact"><%= builder.ctaButtonText %></a>
+        <% } %>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer class="site-footer">
+    <% if (builder?.footerStrip) { %>
+      <div class="footer-strip" aria-hidden="true">
+        <img src="<%= builder.footerStrip %>" alt="">
+      </div>
+    <% } %>
+
+    <div class="container footer-inner">
+      <div class="footer-brand-block">
+        <% if (builder?.brandLogo) { %>
+          <img class="footer-logo" src="<%= builder.brandLogo %>" alt="<%= builder?.businessName || 'Business' %> logo">
+        <% } %>
+        <div>
+          <strong><%= builder?.businessName || "Your Business Name" %></strong>
+          <p>Practical websites and digital systems for real organisations.</p>
+          <% if (builder?.area) { %><p><%= builder.area %></p><% } %>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">Portfolio</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Resources</strong>
+        <a href="/testimonials">Testimonials</a>
+        <a href="/faqs">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Connect</strong>
+        <% if (builder?.email) { %><a href="mailto:<%= builder.email %>"><%= builder.email %></a><% } %>
+        <% if (builder?.website) { %><a href="<%= builder.website %>"><%= builder.website.replace(/^https?:\/\//, '') %></a><% } %>
+        <% if (builder?.area) { %><span><%= builder.area %></span><% } %>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>Built by ASR Web Services • Practical. Maintainable. Purpose-built.</p>
+      <p class="footer-copy">
+        &copy; <%= new Date().getFullYear() %>
+        <%= builder?.businessName || "Your Business Name" %>. All rights reserved.
+      </p>
+
+      <% if (builder?._profileKey || (builder?._availableProfiles && builder._availableProfiles.length)) { %>
+        <small class="footer-profile-meta">
+          <% if (builder?._profileKey) { %>
+            <span class="profile-label">
+              Profile:
+              <strong><%= builder._profileKey %></strong>
+            </span>
+          <% } %>
+
+          <% if (
+            builder?._availableProfiles &&
+            builder._availableProfiles.length &&
+            typeof isDev !== "undefined" &&
+            isDev
+          ) { %>
+            <span class="profile-switch-hint">
+              (Switch with
+              <code>
+                TEMPLATE_PROFILE=<%= builder._availableProfiles.join("|") %>
+              </code>
+              in your .env)
+            </span>
+          <% } %>
+        </small>
+      <% } %>
+    </div>
+  </footer>
+</body>
+</html>

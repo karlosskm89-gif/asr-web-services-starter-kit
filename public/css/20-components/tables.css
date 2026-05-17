@@ -1,0 +1,49 @@
+/* ============================================
+   Table & comparison layout components
+   ============================================ */
+
+/* Generic comparison table wrapper */
+.compare-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: var(--asr-white);
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  font-size: 0.95rem;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #e3e3e3;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+  text-align: left;
+  background: #f8f8f8;
+  font-weight: 600;
+}
+
+.compare-table thead th {
+  background: var(--asr-red);
+  color: var(--asr-white);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+.compare-table td strong {
+  color: var(--asr-blue);
+}

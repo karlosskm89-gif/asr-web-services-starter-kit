@@ -1,0 +1,21 @@
+/* ============================================
+   Layout responsiveness (grids etc.)
+   ============================================ */
+
+/* >= 768px: trust & legal two-column grids */
+@media (min-width: 768px) {
+  .trust-cta {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* <= 992px: stack about intro, adjust compare section wrapper if needed */
+@media (max-width: 992px) {
+  .section-about-intro {
+    grid-template-columns: 1fr;
+  }
+}

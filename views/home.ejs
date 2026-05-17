@@ -1,0 +1,98 @@
+<%
+  const hero = builder?.hero || {};
+  const services = builder?.services || [];
+  const projects = builder?.projects || [];
+  const heroImage = builder?.heroImage || builder?.brandLogo || null;
+  const featureImage = builder?.featureImage || null;
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : (builder?.businessName || "Welcome"),
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.metaDescription || ""),
+  builder,
+  currentPath: "home",
+  body: `
+<section class="hero hero-split">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>${hero.headline || "Welcome to Our Website"}</h1>
+      <p>${hero.subheadline || "Professional services you can rely on."}</p>
+
+      ${hero.badges?.length ? `
+        <div class="hero-badges">
+          ${hero.badges.map(b => `<span>${b}</span>`).join("")}
+        </div>
+      ` : ""}
+
+      <div class="hero-ctas">
+        ${builder?.phone ? `<a href="tel:${builder.phone}" class="btn primary">Call Now</a>` : ""}
+        ${builder?.ctaButtonText ? `<a href="/contact" class="btn secondary">${builder.ctaButtonText}</a>` : ""}
+      </div>
+    </div>
+
+    ${heroImage ? `
+      <figure class="hero-visual-card">
+        <img src="${heroImage}" alt="${builder?.businessName || "Business"} visual identity">
+      </figure>
+    ` : ""}
+  </div>
+</section>
+
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Services</h2>
+    </div>
+    <div class="grid services-grid">
+      ${services.slice(0, 3).map(s => `
+        <div class="service-card">
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+</section>
+
+${featureImage ? `
+<section class="section contact-feature-section">
+  <div class="container contact-feature-grid">
+    <div class="contact-feature-card">
+      <h2>Got questions?</h2>
+      <p>Find answers about the starter kit, profile switching, and the practical service-business structure behind this demo.</p>
+      <a href="/faqs" class="btn secondary">View FAQ</a>
+    </div>
+    <figure class="contact-feature-image">
+      <img src="${featureImage}" alt="ASR mountain frame visual">
+    </figure>
+    <div class="contact-feature-card">
+      <h2>Get in touch</h2>
+      <p>Have a project in mind or want to adapt this starter structure for a real organisation?</p>
+      <a href="/contact" class="btn primary">Contact ASR</a>
+    </div>
+  </div>
+</section>
+` : ""}
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Recent Projects</h2>
+    </div>
+    <div class="grid project-grid">
+      ${projects.map(p => `
+        <div class="project-card">
+          <img src="${p.image || "/assets/img/placeholder.webp"}" alt="${p.title}">
+          <div class="project-card-body">
+            <h3>${p.title}</h3>
+            ${p.summary ? `<p>${p.summary}</p>` : ""}
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+</section>
+`
+}) %>

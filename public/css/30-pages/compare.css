@@ -1,0 +1,49 @@
+/* ============================================
+   Scroll Comparison – Desktop Layout
+   ============================================ */
+
+#services-compare .section-intro h1 {
+  margin-top: 0;
+}
+
+/* Desktop comparison grid */
+#services-compare .section-compare-table .compare-grid {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(5, 1fr); /* feature + 5 scrolls */
+  gap: 0.5rem;
+  align-items: start;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffdf9;
+}
+
+#services-compare .compare-grid > div {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+#services-compare .compare-grid > div:last-child {
+  border-right: none;
+}
+
+#services-compare .compare-header {
+  font-weight: 700;
+  background: var(--asr-gold-light);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+#services-compare .compare-label {
+  font-weight: 600;
+  background: #faf9fb;
+  color: var(--asr-blue);
+}
+
+#services-compare .section-compare-table .btn {
+  display: block;
+  margin: 0.5rem auto;
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+/* Artist / creative – a bit more expressive */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 2px solid rgba(155, 89, 182, 0.4);
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.02em;
+}
+
+/* Hero / top section has a subtle wash */
+.section:first-of-type {
+  background: radial-gradient(circle at top left, rgba(155, 89, 182, 0.08), transparent);
+}
+
+/* Cards a bit more “gallery” like */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(155, 89, 182, 0.2);
+}

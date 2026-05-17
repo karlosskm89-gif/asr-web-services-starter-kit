@@ -1,0 +1,20 @@
+/* ============================================
+   Header and logo responsiveness
+   ============================================ */
+
+/* Use 900px so the mobile header kicks in earlier */
+@media (max-width: 900px) {
+  .site-header .inner {
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem;
+  }
+
+  .asr_logo {
+    display: block !important;
+    height: 56px !important;
+    width: auto !important;
+    margin-bottom: 0.25rem;
+  }
+}

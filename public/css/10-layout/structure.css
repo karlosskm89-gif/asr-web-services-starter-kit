@@ -1,0 +1,64 @@
+/* ============================================================
+   Global Structure & Layout
+   ============================================================ */
+
+/* Page container */
+.site-body {
+  padding-top: 0.5rem;
+}
+
+/* Generic grid helpers */
+.cards-grid,
+.trust-cta,
+.trust-grid,
+.featured-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Generic image treatment */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section backgrounds */
+.section-featured {
+  background: var(--asr-parchment-deep);
+  border-top: 1px solid var(--asr-grey-medium);
+  border-bottom: 1px solid var(--asr-grey-medium);
+  padding: 2rem 1rem;
+}
+
+.featured-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Public-ready layout helpers */
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 3.25rem 0;
+}
+
+.section.alt {
+  background: var(--asr-parchment-deep);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+main {
+  min-height: 60vh;
+}

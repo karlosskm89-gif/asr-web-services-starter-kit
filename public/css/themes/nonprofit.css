@@ -1,0 +1,30 @@
+/* Non-profit / community – calm, friendly, trustworthy */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 3px solid rgba(39, 174, 96, 0.3);
+}
+
+.brand-name {
+  font-weight: 700;
+}
+
+.section {
+  padding-block: 3rem;
+}
+
+/* Gentle background wash on alternate sections */
+.section:nth-of-type(odd) {
+  background: rgba(39, 174, 96, 0.04);
+}
+
+/* Cards with soft corners and subtle borders */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(39, 174, 96, 0.2);
+}

@@ -1,0 +1,31 @@
+/* Corporate / professional – clean, structured */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 3px solid rgba(44, 62, 80, 0.3);
+}
+
+.brand-name {
+  font-weight: 700;
+}
+
+.main-nav a {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* Sections a bit more spacious */
+.section {
+  padding-block: 3.5rem;
+}
+
+/* Cards with subtle borders + squared-ish corners */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(44, 62, 80, 0.15);
+}

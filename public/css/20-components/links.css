@@ -1,0 +1,13 @@
+/* ============================================
+   Link variants
+   ============================================ */
+
+/* Inline “more” links inside paragraphs */
+.link-more {
+  color: var(--asr-blue);
+  text-decoration: underline;
+}
+
+.link-more:hover {
+  color: var(--asr-red);
+}

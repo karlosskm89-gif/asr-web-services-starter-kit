@@ -1,0 +1,31 @@
+/* Entertainer – bold, playful, a little louder */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-bottom: 4px solid rgba(231, 76, 60, 0.5);
+}
+
+.brand-name {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  font-weight: 600;
+}
+
+/* Sections alternate soft backgrounds for energy */
+.section:nth-of-type(odd) {
+  background: rgba(231, 76, 60, 0.03);
+}
+
+/* Cards a little more “poster” like */
+.service-card,
+.project-card,
+.testimonial-card {
+  border-radius: 1rem;
+  border: 2px solid rgba(231, 76, 60, 0.15);
+}
