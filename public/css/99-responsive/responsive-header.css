@@ -2,19 +2,97 @@
    Header and logo responsiveness
    ============================================ */
 
-/* Use 900px so the mobile header kicks in earlier */
+/* Current starter-kit header uses:
+   .site-header > .container.header-inner
+   .header-brand / .brand-link / .brand-logo / .brand-text
+   .main-nav
+   .header-cta / .header-button
+*/
+
 @media (max-width: 900px) {
-  .site-header .inner {
-    display: flex;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0.5rem;
+  .site-header {
+    padding: 0.85rem 0;
   }
 
-  .asr_logo {
-    display: block !important;
-    height: 56px !important;
-    width: auto !important;
-    margin-bottom: 0.25rem;
+  .header-inner {
+    min-height: 0;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 0.85rem;
+    text-align: center;
+  }
+
+  .header-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand-link {
+    justify-content: center;
+    gap: 0.65rem;
+  }
+
+  .brand-logo {
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 auto;
+  }
+
+  .brand-text {
+    text-align: left;
+    max-width: 220px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .brand-area {
+    font-size: 0.82rem;
+  }
+
+  .header-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-button,
+  .header-phone {
+    width: min(100%, 320px);
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    padding: 0.75rem 0;
+  }
+
+  .brand-link {
+    max-width: 100%;
+  }
+
+  .brand-logo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .brand-text {
+    max-width: 190px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-area {
+    font-size: 0.78rem;
   }
 }
