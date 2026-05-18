@@ -115,7 +115,7 @@ const PORT = getInt("PORT", 3000);
 
 const server = app.listen(PORT, () => {
   console.log(
-    `ASR Template Framework running on http://localhost:${PORT}`
+    `ASR Web Services Starter Kit running on http://localhost:${PORT}`
   );
 });
 

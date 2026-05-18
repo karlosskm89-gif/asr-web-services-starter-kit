@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 620" role="img" aria-labelledby="title desc">
+  <title id="title">Riverbend Club page preview</title>
+  <desc id="desc">Simplified website page preview for a fictional showcase item.</desc>
+  <rect width="820" height="620" rx="34" fill="#efe7da"/>
+  <rect x="42" y="34" width="736" height="552" rx="28" fill="#fff" stroke="#d9cfbf"/>
+  <rect x="72" y="66" width="676" height="54" rx="16" fill="#f8f3ea"/>
+  <circle cx="104" cy="93" r="15" fill="#7abf88"/>
+  <rect x="132" y="85" width="170" height="13" rx="6" fill="#24456b"/>
+  <rect x="530" y="84" width="64" height="12" rx="6" fill="#6f675d" opacity=".35"/>
+  <rect x="610" y="84" width="64" height="12" rx="6" fill="#6f675d" opacity=".35"/>
+  <rect x="690" y="79" width="38" height="22" rx="11" fill="#7abf88"/>
+  <rect x="72" y="148" width="676" height="220" rx="26" fill="#24456b"/>
+  <text x="112" y="215" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">Riverbend Club</text>
+  <rect x="112" y="242" width="300" height="13" rx="6" fill="#fff" opacity=".68"/>
+  <rect x="112" y="269" width="250" height="13" rx="6" fill="#fff" opacity=".42"/>
+  <rect x="112" y="314" width="150" height="38" rx="19" fill="#7abf88"/>
+  <text x="187" y="338" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#1f1c17">Community support</text>
+  <rect x="520" y="190" width="160" height="130" rx="24" fill="#fff" opacity=".13"/>
+  <circle cx="600" cy="255" r="44" fill="#7abf88" opacity=".9"/>
+  <rect x="76" y="434" width="154" height="86" rx="16" fill="#fff" stroke="#ded6c9"/><rect x="94" y="456" width="94" height="10" rx="5" fill="#24456b" opacity=".85"/><rect x="94" y="480" width="116" height="8" rx="4" fill="#776f65" opacity=".35"/><text x="94" y="508" font-family="Arial" font-size="12" fill="#5a5248">Events</text><rect x="254" y="434" width="154" height="86" rx="16" fill="#fff" stroke="#ded6c9"/><rect x="272" y="456" width="94" height="10" rx="5" fill="#24456b" opacity=".85"/><rect x="272" y="480" width="116" height="8" rx="4" fill="#776f65" opacity=".35"/><text x="272" y="508" font-family="Arial" font-size="12" fill="#5a5248">Donate</text><rect x="432" y="434" width="154" height="86" rx="16" fill="#fff" stroke="#ded6c9"/><rect x="450" y="456" width="94" height="10" rx="5" fill="#24456b" opacity=".85"/><rect x="450" y="480" width="116" height="8" rx="4" fill="#776f65" opacity=".35"/><text x="450" y="508" font-family="Arial" font-size="12" fill="#5a5248">Volunteer</text><rect x="610" y="434" width="154" height="86" rx="16" fill="#fff" stroke="#ded6c9"/><rect x="628" y="456" width="94" height="10" rx="5" fill="#24456b" opacity=".85"/><rect x="628" y="480" width="116" height="8" rx="4" fill="#776f65" opacity=".35"/><text x="628" y="508" font-family="Arial" font-size="12" fill="#5a5248">Updates</text>
+  <rect x="76" y="548" width="300" height="10" rx="5" fill="#776f65" opacity=".26"/>
+  <rect x="76" y="568" width="520" height="10" rx="5" fill="#776f65" opacity=".18"/>
+</svg>

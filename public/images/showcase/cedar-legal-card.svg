@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Cedar Legal showcase card</title>
+  <desc id="desc">Public-safe fictional showcase preview graphic.</desc>
+  <rect width="900" height="560" rx="38" fill="#f7f3ea"/>
+  <rect x="54" y="58" width="792" height="444" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="3"/>
+  <circle cx="118" cy="120" r="28" fill="#d6b76a" opacity="0.95"/>
+  <rect x="166" y="101" width="240" height="20" rx="10" fill="#1f2937"/>
+  <rect x="166" y="134" width="330" height="12" rx="6" fill="#9ca3af"/>
+  <rect x="90" y="205" width="355" height="38" rx="19" fill="#1f2937"/>
+  <rect x="90" y="262" width="300" height="15" rx="7" fill="#9ca3af"/>
+  <rect x="90" y="294" width="260" height="15" rx="7" fill="#c9ced6"/>
+  <rect x="90" y="356" width="150" height="44" rx="22" fill="#d6b76a"/>
+  <rect x="486" y="194" width="290" height="224" rx="26" fill="#1f2937" opacity="0.96"/>
+  <rect x="523" y="235" width="216" height="20" rx="10" fill="#ffffff" opacity="0.88"/>
+  <rect x="523" y="282" width="170" height="14" rx="7" fill="#ffffff" opacity="0.55"/>
+  <rect x="523" y="314" width="200" height="14" rx="7" fill="#ffffff" opacity="0.55"/>
+  <rect x="523" y="364" width="118" height="36" rx="18" fill="#d6b76a"/>
+</svg>

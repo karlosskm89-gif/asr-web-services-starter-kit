@@ -1,49 +1,135 @@
 # ASR Web Services Starter Kit
 
-A public-safe Express/EJS starter kit for service-business websites, operational workflow demos, and portfolio-ready small-business prototypes.
+A public-safe Express/EJS starter system for small-business websites, booking and enquiry flows, profile-driven demos, fictional showcase examples, and public case-study narratives.
 
-This repository demonstrates how ASR Web Services structures reusable website foundations for organisations that need clear public-facing pages, maintainable content, and practical inquiry/workflow patterns.
+This repository demonstrates how **ASR Web Services** structures maintainable website foundations for organisations that need more than a static brochure site: clear public pages, profile-driven content, reusable layouts, practical workflow patterns, and safe portfolio presentation.
 
-The app is profile-driven: one Express/EJS codebase can load different demo business profiles by changing the `TEMPLATE_PROFILE` environment variable.
+> This is not a production client repository. It is a public portfolio/demo version of a reusable starter architecture. Real client repositories, private data, admin internals, and secrets are intentionally excluded.
 
-## Default profile
+## Live demo
 
-The default profile is now:
+[https://asr-web-services-starter-kit.onrender.com](https://asr-web-services-starter-kit.onrender.com)
+
+## What this repo is meant to show
+
+This repo is designed to prove more than “I can make pages”. It shows:
+
+- a reusable Express/EJS architecture
+- content/profile switching via environment variables
+- reusable layouts and partials
+- public pages for common small-business needs
+- contact/enquiry flow foundations
+- showcase examples that are fictionalised and safe to publish
+- case-study narratives that explain real work without exposing private client code
+- documentation habits and public repo hygiene
+
+## Core features
+
+- Express 5 application structure
+- EJS layouts and reusable partials
+- profile-driven content via `TEMPLATE_PROFILE`
+- modular CSS structure with theme support
+- public pages for home, about, services, portfolio, testimonials, FAQ, contact, starter-kit, showcase, and case studies
+- contact form validation and CSRF protection
+- basic security middleware with Helmet
+- global and contact-specific rate limiting
+- SEO helper structure for per-page titles and descriptions
+- health check route for deployment checks
+- test coverage for core utility behaviour
+- fictional showcase examples for multiple business types
+- public-safe case-study pages for real project patterns
+- docs covering setup, architecture, publishing boundaries, screenshots, and proposal usage
+
+## Profile switching
+
+The app loads a complete demo business profile from the `TEMPLATE_PROFILE` environment variable.
+
+Default:
 
 ```env
 TEMPLATE_PROFILE=asrWebServices
 ```
 
-This gives the project a more realistic ASR Web Services demo identity for screenshots, GitHub presentation, and portfolio use.
+Switch profile examples:
 
-## What this demonstrates
+```env
+TEMPLATE_PROFILE=plasterer
+TEMPLATE_PROFILE=restaurant
+TEMPLATE_PROFILE=painter
+TEMPLATE_PROFILE=photographer
+TEMPLATE_PROFILE=lifeCoach
+TEMPLATE_PROFILE=charity
+```
 
-- Reusable EJS layouts and partials
-- Profile-driven content and demo business variants
-- Responsive service-business website structure
-- Contact form validation and CSRF protection
-- Basic security middleware
-- Rate limiting and request handling
-- SEO helper structure
-- Public-safe placeholder visuals
-- Test coverage for core utility behaviour
+Changing the profile swaps the business identity, copy, services, projects, theme key, and page metadata without changing the shared routes or views.
 
-## Example profile types
+## Included demo profile types
 
 The starter kit includes fictional/demo profiles for:
 
 - ASR Web Services
-- Trades and builders
-- Cafés and restaurants
-- Coaches and tutors
-- Artists and creatives
-- Entertainers
-- Professional services
-- Non-profits and clubs
+- trades and builders
+- cafés and restaurants
+- coaches and tutors
+- artists and creatives
+- entertainers
+- professional services
+- non-profits and clubs
 
-These profiles are intended to show reusable structure, not real client data.
+These profiles are demonstration content only. They are not real client data.
 
-## Run locally
+## Showcase examples
+
+The `/showcase` route includes eight fictional public-safe examples:
+
+| Example | Use case | Status |
+| --- | --- | --- |
+| Oakline Decorating Co. | Trades / decorating website | Complete fictional example |
+| Harbour Brew Café | Café / local hospitality website | Complete fictional example |
+| Luma Creative Home Base | Creator / personal brand hub | Complete fictional example |
+| Haven Wellness Practice | Private practice / wellness website | Complete fictional example |
+| Riverbend Community Club | Charity / club / community organisation | Complete fictional example |
+| Cedar Legal Consulting | Professional services / advisory website | Complete fictional example |
+| Summit Fit Studio | Fitness / studio website | Complete fictional example |
+| Bloomfield Florist | Local retail / florist website | Complete fictional example |
+
+Each showcase item includes:
+
+- summary
+- problem statement
+- solution pattern
+- typical page sections
+- proof/use-case notes
+- public-safe placeholder visual assets
+
+These are not fake client claims. They are clearly marked fictional examples showing reusable patterns and proposal/mockup thinking.
+
+## Case-study narratives
+
+The `/case-studies` route includes public-safe narrative pages for:
+
+- ForwardSteps Private Practice Platform
+- Aid Cancer Treatment Digital Support
+- ASR Web Services Starter Kit
+
+These pages explain business problems, solution patterns, highlights, and technology notes without publishing private code, data, admin screens, or client-specific internals.
+
+## Example use cases
+
+This project can support:
+
+- local trades websites
+- private practice or wellness websites
+- café / restaurant starter sites
+- creative portfolio websites
+- charity or club websites
+- enquiry-driven business sites
+- early-stage booking or enquiry workflows
+- public-safe proposal mockups
+- client discovery concepts
+- portfolio proof for agencies or clients
+
+## Local setup
 
 ```bash
 npm install
@@ -51,16 +137,10 @@ cp .env.example .env
 npm start
 ```
 
-Then visit:
+Then open:
 
 ```text
 http://localhost:3000
-```
-
-To switch the demo site, change `TEMPLATE_PROFILE` in `.env`, for example:
-
-```env
-TEMPLATE_PROFILE=restaurant
 ```
 
 ## Tests
@@ -69,10 +149,79 @@ TEMPLATE_PROFILE=restaurant
 npm test
 ```
 
+## Useful routes
+
+```text
+/                                      Home
+/about                                 About page
+/services                              Services overview
+/portfolio                             Portfolio / project cards
+/starter-kit                           Starter kit explanation and profile list
+/showcase                              Fictional showcase examples and use cases
+/showcase/oakline-decorating           Trades showcase detail
+/showcase/harbour-brew-cafe            Café showcase detail
+/showcase/luma-creative-home-base      Creator showcase detail
+/showcase/haven-wellness-practice      Wellness showcase detail
+/showcase/riverbend-community-club     Community showcase detail
+/showcase/cedar-legal-consulting        Professional services showcase detail
+/showcase/summit-fit-studio             Fitness studio showcase detail
+/showcase/bloomfield-florist            Local retail showcase detail
+/case-studies                          Public-safe case-study narratives
+/case-studies/forwardsteps-private-practice-platform
+/case-studies/aid-cancer-treatment-digital-support
+/case-studies/asr-web-services-starter-kit
+/testimonials                          Testimonials / demo notes
+/faqs                                  Frequently asked questions
+/contact                               Contact form
+/healthz                               Health check
+```
+
+## Project structure
+
+```text
+config/        Profile loading and SEO helpers
+controllers/   Page controller logic
+core/          Shared middleware, utilities, validation, mail helper
+modules/       Demo business profiles
+public/        CSS, images, and placeholder showcase assets
+routes/        Express route definitions
+scripts/       Profile helper scripts
+views/         EJS views, layout, and partials
+data/          Showcase items, case-study data, and reusable public data
+docs/          Public documentation, portfolio notes, publishing guidance
+screenshots/   GitHub screenshot checklist and future image location
+tests/         Node test runner tests
+```
+
 ## Privacy and client data
 
-This repository does not contain production client code, real databases, real form submissions, or private client systems. It is a public-safe demonstration of reusable structure and approach.
+This repository does **not** contain production client code, private databases, real form submissions, private admin systems, real `.env` secrets, or client credentials.
+
+The public version is intended to demonstrate structure, approach, and reusable patterns while keeping real client work private.
+
+## Screenshot status
+
+The project includes public-safe SVG preview assets and a screenshot checklist. Real browser screenshots should be added to `screenshots/` when convenient, but the repository is structured and documented to be understandable without them.
+
+Recommended screenshots:
+
+- homepage desktop
+- homepage mobile
+- starter-kit page
+- showcase page
+- one showcase detail page
+- case-studies page
+- contact form
+
+See `docs/screenshot-guide.md`.
 
 ## About ASR Web Services
 
-ASR Web Services focuses on practical websites and digital systems for service businesses and organisations, including booking and inquiry workflows, maintainable content systems, operational dashboards, and long-term digital stewardship.
+ASR Web Services is a Cork-based web studio focused on practical websites and digital systems for small businesses, charities, service providers, and independent organisations.
+
+The focus is on clear communication, maintainable systems, enquiry/booking flows, and long-term digital stewardship — not just surface-level design.
+
+
+## Case Study Philosophy
+
+The included case studies focus on operational outcomes, maintainability, and long-term organisational value rather than purely visual presentation.

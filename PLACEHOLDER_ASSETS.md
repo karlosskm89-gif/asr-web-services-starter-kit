@@ -1,16 +1,17 @@
-# Placeholder Assets
+# Placeholder and Public-Safe Assets
 
-This starter kit includes lightweight reusable placeholder assets for:
+This public starter kit intentionally uses placeholder/demo assets.
 
-- Wellness businesses
-- Trades businesses
-- Creative/café style businesses
+## Current included assets
 
-These are intentionally generic and public-safe so the starter kit can be adapted
-to different industries without requiring copyrighted branding or client assets.
+- `public/images/showcase/oakline-decorating-card.svg` — fictional trades/decorating showcase card.
+- `public/images/showcase/oakline-decorating-screen.svg` — fictional trades/decorating page preview.
+- `public/images/showcase/creative-home-base-screen.svg` — placeholder creator/portfolio page preview.
+- `public/images/showcase/wellness-practice-screen.svg` — placeholder wellness/private-practice page preview.
+- Existing generic SVG hero/logo assets for showcase cards.
 
-Suggested replacement sources:
-- Unsplash
-- Pexels
-- Client photography
-- Custom SVG branding
+## Asset rules
+
+Do not publish real client logos, phone numbers, email addresses, domains, addresses, proposal screenshots, or branded mockups unless they have been explicitly cleared or fictionalised.
+
+When converting private mockups into public examples, replace the business identity first and then update the explanation to describe what the mockup demonstrates.

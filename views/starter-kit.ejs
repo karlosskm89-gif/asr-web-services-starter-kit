@@ -1,0 +1,92 @@
+<%
+  const profiles = builder?._availableProfiles || [];
+  const profileGroups = [
+    { title: "Service businesses", items: ["plasterer", "accountant", "consultant", "solicitor"] },
+    { title: "Food and hospitality", items: ["cafeDemo", "restaurant", "takeAway"] },
+    { title: "Creative and personal brands", items: ["artist", "author", "painter", "photographer", "band", "dj"] },
+    { title: "Wellness, coaching and community", items: ["lifeCoach", "musicLessons", "sportCoach", "charity", "clubs"] },
+  ];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : "ASR Web Services Starter Kit",
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : "Profile-driven Express and EJS starter system for small-business websites and enquiry-focused demos.",
+  builder,
+  currentPath: "starter-kit",
+  body: `
+<section class="section starter-hero">
+  <div class="container starter-grid">
+    <div>
+      <p class="eyebrow">Public technical showcase</p>
+      <h1>ASR Web Services Starter Kit</h1>
+      <p class="lead">A reusable Express/EJS foundation for small-business websites, booking and inquiry flows, and proposal-ready demo profiles.</p>
+      <div class="hero-badges">
+        <span>Express</span>
+        <span>EJS</span>
+        <span>Profile-driven content</span>
+        <span>Modular CSS</span>
+      </div>
+    </div>
+    <aside class="starter-panel">
+      <h2>Current demo profile</h2>
+      <p><code>TEMPLATE_PROFILE=${builder?._profileKey || "asrWebServices"}</code></p>
+      <p>Change the environment value to load a different fictional business profile without changing routes or views.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>What this starter kit demonstrates</h2>
+      <p>A small, practical architecture for repeatable service-business websites.</p>
+    </div>
+    <div class="grid services-grid">
+      <div class="service-card"><h3>Reusable page structure</h3><p>Shared EJS layouts and partials power home, about, services, portfolio, FAQ, testimonials, and contact pages.</p></div>
+      <div class="service-card"><h3>Profile-driven content</h3><p>Business identity, page copy, services, projects, testimonials, SEO text, and theme choices come from profile modules.</p></div>
+      <div class="service-card"><h3>Inquiry-ready foundation</h3><p>Includes contact validation, CSRF protection, rate limiting, security headers, and deployment-friendly health checks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Example profile families</h2>
+      <p>These are fictional/demo profiles used to test how one codebase adapts across different sectors.</p>
+    </div>
+    <div class="grid project-grid">
+      ${profileGroups.map(group => `
+        <div class="project-card starter-profile-card">
+          <div class="project-card-body">
+            <h3>${group.title}</h3>
+            <p>${group.items.filter(item => profiles.includes(item)).join(", ") || "Demo profiles available in modules/"}</p>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container starter-docs-grid">
+    <div>
+      <h2>Designed for public portfolio use</h2>
+      <p>This repository is intentionally public-safe. Real client code, private admin systems, form submissions, databases, API keys, and sensitive assets are kept out of the public version.</p>
+    </div>
+    <div class="starter-panel">
+      <h3>Useful docs</h3>
+      <ul class="plain-list">
+        <li><code>README.md</code> — public project overview</li>
+        <li><code>docs/profile-switching.md</code> — how profile loading works</li>
+        <li><code>docs/public-portfolio-notes.md</code> — what stays public vs private</li>
+        <li><code>docs/mockup-fictionalisation.md</code> — how branded mockups should be cleaned before publication</li>
+        <li><a href="/showcase">/showcase</a> — public use cases and mockup strategy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+`
+}) %>

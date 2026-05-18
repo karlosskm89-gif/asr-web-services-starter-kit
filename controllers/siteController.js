@@ -4,6 +4,8 @@ const { contactEmailHtml } = require("../core/utils/htmlEmailTemplates");
 const { pageTitle, pageDescription } = require("../config/seoHelper");
 const { AppError } = require("../core/utils/appError");
 const { builder } = require("../config/profileLoader");
+const { showcaseItems, useCases, getShowcaseItem } = require("../data/showcaseItems");
+const { caseStudies, getCaseStudy } = require("../data/caseStudies");
 
 function ensureBuilder() {
   if (!builder) {
@@ -57,6 +59,66 @@ exports.portfolio = (req, res) => {
   res.render("portfolio", baseView({ title, metaDescription }));
 };
 
+
+exports.showcase = (req, res) => {
+  ensureBuilder();
+  res.render("showcase", baseView({
+    title: "Showcase & Use Cases | ASR Web Services Starter Kit",
+    metaDescription: "Example use cases, public-safe showcase concepts, and mockup packaging notes for the ASR Web Services Starter Kit.",
+    currentPath: "showcase",
+    showcaseItems,
+    useCases,
+  }));
+};
+
+exports.showcaseDetail = (req, res, next) => {
+  ensureBuilder();
+  const item = getShowcaseItem(req.params.slug);
+
+  if (!item) {
+    return next(new AppError(404, "Showcase item not found", {
+      isOperational: true,
+      meta: { slug: req.params.slug },
+    }));
+  }
+
+  res.render("showcase-detail", baseView({
+    title: `${item.title} | ASR Web Services Starter Kit`,
+    metaDescription: item.summary,
+    currentPath: "showcase",
+    item,
+  }));
+};
+
+exports.caseStudies = (req, res) => {
+  ensureBuilder();
+  res.render("case-studies", baseView({
+    title: "Case Studies | ASR Web Services Starter Kit",
+    metaDescription: "Public-safe case-study narratives showing how the starter kit approach maps to real websites, booking systems, and digital support work.",
+    currentPath: "case-studies",
+    caseStudies,
+  }));
+};
+
+exports.caseStudyDetail = (req, res, next) => {
+  ensureBuilder();
+  const item = getCaseStudy(req.params.slug);
+
+  if (!item) {
+    return next(new AppError(404, "Case study not found", {
+      isOperational: true,
+      meta: { slug: req.params.slug },
+    }));
+  }
+
+  res.render("case-study-detail", baseView({
+    title: `${item.title} | ASR Web Services Starter Kit`,
+    metaDescription: item.summary,
+    currentPath: "case-studies",
+    item,
+  }));
+};
+
 exports.testimonials = (req, res) => {
   ensureBuilder();
   const { title, metaDescription } = seo("testimonials");
@@ -67,6 +129,15 @@ exports.faqs = (req, res) => {
   ensureBuilder();
   const { title, metaDescription } = seo("faqs");
   res.render("faqs", baseView({ title, metaDescription }));
+};
+
+exports.starterKit = (req, res) => {
+  ensureBuilder();
+  res.render("starter-kit", baseView({
+    title: "ASR Web Services Starter Kit",
+    metaDescription: "Profile-driven Express and EJS starter system for small-business websites, booking flows, and enquiry-driven demos.",
+    currentPath: "starter-kit",
+  }));
 };
 
 exports.contact = (req, res) => {

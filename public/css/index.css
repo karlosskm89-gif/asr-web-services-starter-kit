@@ -32,6 +32,8 @@
 @import "./30-pages/quote.css";
 @import "./30-pages/faq.css";
 @import "./30-pages/case-studies.css";
+@import "./30-pages/starter-kit.css";
+@import "./30-pages/showcase.css";
 
 /* 99-responsive */
 @import "./99-responsive/responsive-layout.css";
