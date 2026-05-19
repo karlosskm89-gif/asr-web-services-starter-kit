@@ -119,7 +119,7 @@ const server = app.listen(PORT, () => {
   );
 });
 
-// Register shutdown hooks (current implementation just uses the app object)
-registerShutdown(app);
+// Register shutdown hooks for the actual HTTP server
+registerShutdown(server);
 
 module.exports = app;

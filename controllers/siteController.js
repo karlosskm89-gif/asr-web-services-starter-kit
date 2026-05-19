@@ -3,7 +3,7 @@ const { sendMail } = require("../core");
 const { contactEmailHtml } = require("../core/utils/htmlEmailTemplates");
 const { pageTitle, pageDescription } = require("../config/seoHelper");
 const { AppError } = require("../core/utils/appError");
-const { builder } = require("../config/profileLoader");
+const { builder, loadProfile, profiles } = require("../config/profileLoader");
 const { showcaseItems, useCases, getShowcaseItem } = require("../data/showcaseItems");
 const { caseStudies, getCaseStudy } = require("../data/caseStudies");
 
@@ -35,6 +35,42 @@ function baseView(extra = {}) {
   };
 }
 
+
+function profileSummary(key) {
+  const profile = profiles[key];
+  if (!profile) return null;
+
+  return {
+    key,
+    businessName: profile.businessName || key,
+    area: profile.area || "",
+    category: profile.themeKey || "demo",
+    headline: profile.hero?.headline || profile.seo?.metaDescription || "",
+    summary:
+      profile.hero?.subheadline ||
+      profile.about?.intro ||
+      profile.seo?.metaDescription ||
+      "Profile-driven demo variant.",
+    badges: Array.isArray(profile.hero?.badges) ? profile.hero.badges : [],
+    logo: profile.brandLogo || profile.heroImage || null,
+  };
+}
+
+function allShowcaseProfiles() {
+  return Object.keys(profiles)
+    .filter((key) => key !== "asrWebServices")
+    .map(profileSummary)
+    .filter(Boolean)
+    .sort((a, b) => a.businessName.localeCompare(b.businessName));
+}
+
+function showcaseView(extra = {}) {
+  return {
+    shellBuilder: builder,
+    ...extra,
+  };
+}
+
 exports.home = (req, res) => {
   ensureBuilder();
   const { title, metaDescription } = seo("home");
@@ -61,18 +97,56 @@ exports.portfolio = (req, res) => {
 
 
 exports.showcase = (req, res) => {
+  res.redirect("/showcase-mode");
+};
+
+exports.showcaseMode = (req, res) => {
   ensureBuilder();
-  res.render("showcase", baseView({
-    title: "Showcase & Use Cases | ASR Web Services Starter Kit",
-    metaDescription: "Example use cases, public-safe showcase concepts, and mockup packaging notes for the ASR Web Services Starter Kit.",
-    currentPath: "showcase",
-    showcaseItems,
-    useCases,
+
+  res.render("showcase-mode", baseView({
+    title: "Showcase Mode | ASR Web Services Starter Kit",
+    metaDescription:
+      "Explore profile-driven demo variants inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
+    currentPath: "showcase-mode",
+    profiles: allShowcaseProfiles(),
+    asrProfile: profileSummary("asrWebServices"),
+  }));
+};
+
+exports.showcaseProfile = (req, res, next) => {
+  ensureBuilder();
+
+  const key = req.params.profileKey;
+  const demoProfile = profiles[key];
+
+  if (!demoProfile || key === "asrWebServices") {
+    return next(new AppError(404, "Showcase profile not found", {
+      isOperational: true,
+      meta: { profileKey: key },
+    }));
+  }
+
+  const selectedProfile = loadProfile(key);
+  const pageCss =
+    selectedProfile.pageCss ||
+    (selectedProfile.themeKey ? `/css/themes/${selectedProfile.themeKey}.css` : null);
+
+  res.render("showcase-profile", showcaseView({
+    builder: selectedProfile,
+    pageCss,
+    title: `${selectedProfile.businessName} | Showcase Mode`,
+    metaDescription:
+      selectedProfile.seo?.metaDescription ||
+      selectedProfile.hero?.subheadline ||
+      "Profile-driven demo variant inside the ASR Web Services Starter Kit.",
+    currentPath: "showcase-mode",
+    profiles: allShowcaseProfiles(),
+    selectedKey: key,
   }));
 };
 
 exports.showcaseDetail = (req, res, next) => {
-  ensureBuilder();
+  // Legacy showcase detail support retained for older links.
   const item = getShowcaseItem(req.params.slug);
 
   if (!item) {
@@ -82,12 +156,7 @@ exports.showcaseDetail = (req, res, next) => {
     }));
   }
 
-  res.render("showcase-detail", baseView({
-    title: `${item.title} | ASR Web Services Starter Kit`,
-    metaDescription: item.summary,
-    currentPath: "showcase",
-    item,
-  }));
+  res.redirect(`/showcase-mode`);
 };
 
 exports.caseStudies = (req, res) => {

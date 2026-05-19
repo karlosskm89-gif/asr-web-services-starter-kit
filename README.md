@@ -225,3 +225,16 @@ The focus is on clear communication, maintainable systems, enquiry/booking flows
 ## Case Study Philosophy
 
 The included case studies focus on operational outcomes, maintainability, and long-term organisational value rather than purely visual presentation.
+
+
+## Showcase Mode
+
+The public demo keeps ASR Web Services as the core identity and exposes profile switching through `/showcase-mode`.
+
+This avoids treating showcase examples as separate disconnected mockups. Instead, Showcase Mode demonstrates the real architecture: the same Express/EJS starter system rendering different fictional/public-safe business profiles through structured profile data.
+
+- `/` remains the ASR core profile.
+- `/showcase-mode` lists available demo profiles.
+- `/showcase-mode/:profileKey` previews a selected profile inside the ASR-branded shell.
+
+This is intended as proof of modular profile-driven architecture, not as a claim that the fictional profiles are real client websites.

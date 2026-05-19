@@ -12,15 +12,14 @@
       <p class="lead">${item.summary}</p>
       <div class="hero-badges">
         <span>${item.status}</span>
-        <span>Public-safe</span>
-        <span>Private repo protected</span>
+        <span>${item.projectType}</span>
+        <span>Public-safe narrative</span>
       </div>
     </div>
     <aside class="starter-panel">
-      <h2>Highlights</h2>
-      <ul class="plain-list">
-        ${item.highlights.map(point => `<li>${point}</li>`).join("")}
-      </ul>
+      <h2>Role</h2>
+      <p>${item.role}</p>
+      ${item.impact ? `<p class="note-card">${item.impact}</p>` : ""}
     </aside>
   </div>
 </section>
@@ -28,32 +27,56 @@
 <section class="section alt">
   <div class="container starter-docs-grid">
     <div>
-      <h2>Problem</h2>
-      <p>${item.problem}</p>
-      <h2>Solution pattern</h2>
-      <p>${item.solution}</p>
-      <p class="note-card">${item.privacyNote}</p>
+      <h2>Overview</h2>
+      <p>${item.overview}</p>
+
+      <h2>The challenge</h2>
+      <p>${item.challenge}</p>
+
+      <h2>Systems philosophy</h2>
+      <p>${item.philosophy}</p>
     </div>
-    <div class="starter-panel">
-      <h3>Technology / pattern notes</h3>
+
+    <aside class="starter-panel">
+      <h3>Technical scope</h3>
       <ul class="tag-list case-study-tags">
         ${item.stack.map(tag => `<li>${tag}</li>`).join("")}
       </ul>
-    </div>
+    </aside>
   </div>
 </section>
 
 <section class="section">
   <div class="container starter-docs-grid">
     <div>
-      <h2>How this fits the starter kit</h2>
-      <p>The starter kit is the public, reusable version of the same thinking: content-driven structure, practical routing, reusable views, contact/enquiry foundations, documentation, and safe separation between public demo work and private client systems.</p>
+      <h2>What was built</h2>
+      <ul class="plain-list feature-list">
+        ${item.implementation.map(point => `<li>${point}</li>`).join("")}
+      </ul>
     </div>
+
+    <div class="starter-panel">
+      <h3>Operational outcomes</h3>
+      <ul class="plain-list">
+        ${item.outcomes.map(point => `<li>${point}</li>`).join("")}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container starter-docs-grid">
+    <div>
+      <h2>Key takeaway</h2>
+      <p>${item.takeaway}</p>
+      <p class="note-card">${item.privacyNote}</p>
+    </div>
+
     <div class="starter-panel">
       <h3>Related public areas</h3>
       <ul class="plain-list">
         <li><a class="text-link" href="/starter-kit">Starter kit overview</a></li>
-        <li><a class="text-link" href="/showcase">Fictional showcase examples</a></li>
+        <li><a class="text-link" href="/showcase-mode">Showcase Mode</a></li>
         <li><a class="text-link" href="/case-studies">Back to case studies</a></li>
       </ul>
     </div>

@@ -17,6 +17,8 @@ router.get("/services", asyncHandler(siteController.services));
 router.get("/portfolio", asyncHandler(siteController.portfolio));
 router.get("/starter-kit", asyncHandler(siteController.starterKit));
 router.get("/showcase", asyncHandler(siteController.showcase));
+router.get("/showcase-mode", asyncHandler(siteController.showcaseMode));
+router.get("/showcase-mode/:profileKey", asyncHandler(siteController.showcaseProfile));
 router.get("/showcase/:slug", asyncHandler(siteController.showcaseDetail));
 router.get("/case-studies", asyncHandler(siteController.caseStudies));
 router.get("/case-studies/:slug", asyncHandler(siteController.caseStudyDetail));

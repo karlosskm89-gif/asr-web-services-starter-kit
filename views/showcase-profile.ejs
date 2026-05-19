@@ -1,0 +1,131 @@
+<%
+  const hero = builder?.hero || {};
+  const services = builder?.services || [];
+  const projects = builder?.projects || [];
+  const heroImage = builder?.heroImage || builder?.brandLogo || null;
+  const profileList = Array.isArray(profiles) ? profiles : [];
+%>
+
+<%- include("./layouts/mainLayout", {
+  title: typeof title !== "undefined" ? title : `${builder?.businessName || "Profile"} | Showcase Mode`,
+  metaDescription: typeof metaDescription !== "undefined"
+    ? metaDescription
+    : (builder?.seo?.metaDescription || ""),
+  builder,
+  shellBuilder,
+  pageCss,
+  currentPath: "showcase-mode",
+  body: `
+<section class="showcase-mode-banner">
+  <div class="container showcase-mode-banner-inner">
+    <div>
+      <p class="eyebrow">Showcase Mode</p>
+      <strong>${builder?.businessName || "Demo profile"}</strong>
+      <span>This is a fictional/public-safe profile rendered inside the ASR starter-kit shell.</span>
+    </div>
+    <div class="showcase-mode-actions">
+      <a href="/showcase-mode" class="text-link">Switch profile</a>
+      <a href="/" class="text-link">Return to ASR core</a>
+    </div>
+  </div>
+</section>
+
+<section class="hero hero-split showcase-profile-preview">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Active profile: ${builder?._profileKey || ""}</p>
+      <h1>${hero.headline || builder?.businessName || "Demo profile"}</h1>
+      <p>${hero.subheadline || builder?.seo?.metaDescription || "Profile-driven demo content."}</p>
+
+      ${hero.badges?.length ? `
+        <div class="hero-badges">
+          ${hero.badges.map(b => `<span>${b}</span>`).join("")}
+        </div>
+      ` : ""}
+
+      <div class="hero-ctas">
+        ${builder?.phone ? `<a href="tel:${builder.phone}" class="btn primary">Call Now</a>` : ""}
+        <a href="/showcase-mode" class="btn secondary">Choose another profile</a>
+      </div>
+    </div>
+
+    ${heroImage ? `
+      <figure class="hero-visual-card">
+        <img src="${heroImage}" alt="${builder?.businessName || "Business"} visual identity">
+      </figure>
+    ` : ""}
+  </div>
+</section>
+
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Example service structure</h2>
+      <p>
+        This section is generated from the selected profile data. The underlying layout remains reusable.
+      </p>
+    </div>
+
+    <div class="grid services-grid">
+      ${services.slice(0, 4).map(s => `
+        <article class="service-card">
+          <h3>${s.title || s.name}</h3>
+          <p>${s.description || s.blurb || ""}</p>
+          ${s.meta ? `<p class="showcase-mode-meta">${s.meta}</p>` : ""}
+        </article>
+      `).join("")}
+    </div>
+  </div>
+</section>
+
+${projects?.length ? `
+<section class="section alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Example project / content blocks</h2>
+      <p>
+        These demonstrate how profile-specific content can reuse the same card structures.
+      </p>
+    </div>
+
+    <div class="grid project-grid">
+      ${projects.slice(0, 3).map(p => `
+        <article class="project-card">
+          <img src="${p.image || "/assets/img/placeholder.webp"}" alt="${p.title}">
+          <div class="project-card-body">
+            <h3>${p.title}</h3>
+            ${p.summary ? `<p>${p.summary}</p>` : ""}
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  </div>
+</section>
+` : ""}
+
+<section class="section">
+  <div class="container starter-docs-grid">
+    <div>
+      <h2>Profile-switching proof</h2>
+      <p>
+        This page is not a separate hard-coded website. It is the same starter-kit architecture
+        rendering a different profile object. That is the core idea behind Showcase Mode.
+      </p>
+    </div>
+    <aside class="starter-panel">
+      <h3>Other profiles</h3>
+      <ul class="plain-list">
+        ${profileList.slice(0, 8).map(profile => `
+          <li>
+            ${profile.key === (builder?._profileKey || "") 
+              ? `<strong>${profile.businessName}</strong>` 
+              : `<a href="/showcase-mode/${profile.key}">${profile.businessName}</a>`}
+          </li>
+        `).join("")}
+      </ul>
+      <a class="text-link" href="/showcase-mode">View all profiles →</a>
+    </aside>
+  </div>
+</section>
+`
+}) %>

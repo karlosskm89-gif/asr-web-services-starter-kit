@@ -1,3 +1,12 @@
+## Showcase Mode profile-switching refactor
+
+- Reframed the old showcase layer as Showcase Mode.
+- Kept ASR Web Services as the core/default identity.
+- Added `/showcase-mode` profile selector.
+- Added `/showcase-mode/:profileKey` demo preview routes.
+- Preserved legacy `/showcase` redirects for older links.
+- Added ASR shell support so demo profiles render inside ASR-branded chrome.
+
 # Changelog
 
 ## 2026-05-18 — Showcase expansion pass

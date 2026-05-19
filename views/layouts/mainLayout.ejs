@@ -1,8 +1,9 @@
+<% const chromeBuilder = (typeof shellBuilder !== "undefined" && shellBuilder) ? shellBuilder : builder; %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title><%= title || builder?.businessName || "Website" %></title>
+  <title><%= title || chromeBuilder?.businessName || builder?.businessName || "Website" %></title>
   <meta
     name="description"
     content="<%= typeof metaDescription !== 'undefined' ? metaDescription : '' %>"
@@ -25,13 +26,13 @@
     <div class="container header-inner">
       <div class="header-brand">
         <a href="/" class="brand-link">
-          <% if (builder?.brandLogo) { %>
-            <img class="brand-logo" src="<%= builder.brandLogo %>" alt="<%= builder?.businessName || 'Business' %> logo">
+          <% if (chromeBuilder?.brandLogo) { %>
+            <img class="brand-logo" src="<%= chromeBuilder.brandLogo %>" alt="<%= chromeBuilder?.businessName || 'Business' %> logo">
           <% } %>
           <span class="brand-text">
-            <span class="brand-name"><%= builder?.businessName || "Your Business Name" %></span>
-            <% if (builder?.area) { %>
-              <span class="brand-area"><%= builder.area %></span>
+            <span class="brand-name"><%= chromeBuilder?.businessName || "Your Business Name" %></span>
+            <% if (chromeBuilder?.area) { %>
+              <span class="brand-area"><%= chromeBuilder.area %></span>
             <% } %>
           </span>
         </a>
@@ -43,7 +44,7 @@
         <a href="/services" class="<%= currentPath === 'services' ? 'active' : '' %>">Services</a>
         <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
         <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Starter Kit</a>
-        <a href="/showcase" class="<%= currentPath === 'showcase' ? 'active' : '' %>">Showcase</a>
+        <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Showcase Mode</a>
         <a href="/case-studies" class="<%= currentPath === 'case-studies' ? 'active' : '' %>">Case Studies</a>
         <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Testimonials</a>
         <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
@@ -51,12 +52,12 @@
       </nav>
 
       <div class="header-cta">
-        <% if (builder?.phone) { %>
-          <a class="header-phone" href="tel:<%= builder.phone %>">
-            Call: <%= builder.phone %>
+        <% if (chromeBuilder?.phone) { %>
+          <a class="header-phone" href="tel:<%= chromeBuilder.phone %>">
+            Call: <%= chromeBuilder.phone %>
           </a>
-        <% } else if (builder?.ctaButtonText) { %>
-          <a class="header-button" href="/contact"><%= builder.ctaButtonText %></a>
+        <% } else if (chromeBuilder?.ctaButtonText) { %>
+          <a class="header-button" href="/contact"><%= chromeBuilder.ctaButtonText %></a>
         <% } %>
       </div>
     </div>
@@ -67,21 +68,21 @@
   </main>
 
   <footer class="site-footer">
-    <% if (builder?.footerStrip) { %>
+    <% if (chromeBuilder?.footerStrip) { %>
       <div class="footer-strip" aria-hidden="true">
-        <img src="<%= builder.footerStrip %>" alt="">
+        <img src="<%= chromeBuilder.footerStrip %>" alt="">
       </div>
     <% } %>
 
     <div class="container footer-inner">
       <div class="footer-brand-block">
-        <% if (builder?.brandLogo) { %>
-          <img class="footer-logo" src="<%= builder.brandLogo %>" alt="<%= builder?.businessName || 'Business' %> logo">
+        <% if (chromeBuilder?.brandLogo) { %>
+          <img class="footer-logo" src="<%= chromeBuilder.brandLogo %>" alt="<%= chromeBuilder?.businessName || 'Business' %> logo">
         <% } %>
         <div>
-          <strong><%= builder?.businessName || "Your Business Name" %></strong>
+          <strong><%= chromeBuilder?.businessName || "Your Business Name" %></strong>
           <p>Practical websites and digital systems for real organisations.</p>
-          <% if (builder?.area) { %><p><%= builder.area %></p><% } %>
+          <% if (chromeBuilder?.area) { %><p><%= chromeBuilder.area %></p><% } %>
         </div>
       </div>
 
@@ -92,7 +93,7 @@
         <a href="/services">Services</a>
         <a href="/portfolio">Portfolio</a>
         <a href="/starter-kit">Starter Kit</a>
-        <a href="/showcase">Showcase</a>
+        <a href="/showcase-mode">Showcase Mode</a>
         <a href="/case-studies">Case Studies</a>
       </div>
 
@@ -105,9 +106,9 @@
 
       <div class="footer-links">
         <strong>Connect</strong>
-        <% if (builder?.email) { %><a href="mailto:<%= builder.email %>"><%= builder.email %></a><% } %>
-        <% if (builder?.website) { %><a href="<%= builder.website %>"><%= builder.website.replace(/^https?:\/\//, '') %></a><% } %>
-        <% if (builder?.area) { %><span><%= builder.area %></span><% } %>
+        <% if (chromeBuilder?.email) { %><a href="mailto:<%= chromeBuilder.email %>"><%= chromeBuilder.email %></a><% } %>
+        <% if (chromeBuilder?.website) { %><a href="<%= chromeBuilder.website %>"><%= chromeBuilder.website.replace(/^https?:\/\//, '') %></a><% } %>
+        <% if (chromeBuilder?.area) { %><span><%= chromeBuilder.area %></span><% } %>
       </div>
     </div>
 
@@ -115,7 +116,7 @@
       <p>Built by ASR Web Services • Practical. Maintainable. Purpose-built.</p>
       <p class="footer-copy">
         &copy; <%= new Date().getFullYear() %>
-        <%= builder?.businessName || "Your Business Name" %>. All rights reserved.
+        <%= chromeBuilder?.businessName || "Your Business Name" %>. All rights reserved.
       </p>
 
       <% if (builder?._profileKey || (builder?._availableProfiles && builder._availableProfiles.length)) { %>
