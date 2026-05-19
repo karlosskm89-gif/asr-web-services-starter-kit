@@ -19,9 +19,9 @@
 <section class="section starter-hero">
   <div class="container starter-grid">
     <div>
-      <p class="eyebrow">Public technical showcase</p>
+      <p class="eyebrow">ASR technical showcase</p>
       <h1>ASR Web Services Starter Kit</h1>
-      <p class="lead">A reusable Express/EJS foundation for small-business websites, booking and inquiry flows, and proposal-ready demo profiles.</p>
+      <p class="lead">A practical Express/EJS foundation for service-business websites, enquiry flows and reusable public demos.</p>
       <div class="hero-badges">
         <span>Express</span>
         <span>EJS</span>
@@ -32,7 +32,7 @@
     <aside class="starter-panel">
       <h2>Current demo profile</h2>
       <p><code>TEMPLATE_PROFILE=${builder?._profileKey || "asrWebServices"}</code></p>
-      <p>Change the environment value to load a different fictional business profile without changing routes or views.</p>
+      <p>Switch the profile value to preview a different business type while keeping the same routes, views and maintainable structure.</p>
     </aside>
   </div>
 </section>
@@ -40,8 +40,8 @@
 <section class="section alt">
   <div class="container">
     <div class="section-heading">
-      <h2>What this starter kit demonstrates</h2>
-      <p>A small, practical architecture for repeatable service-business websites.</p>
+      <h2>What this starter kit gives a buyer</h2>
+      <p>A clear example of how ASR builds websites that can be understood, maintained and extended.</p>
     </div>
     <div class="grid services-grid">
       <div class="service-card"><h3>Reusable page structure</h3><p>Shared EJS layouts and partials power home, about, services, portfolio, FAQ, testimonials, and contact pages.</p></div>
@@ -55,7 +55,7 @@
   <div class="container">
     <div class="section-heading">
       <h2>Example profile families</h2>
-      <p>These are fictional/demo profiles used to test how one codebase adapts across different sectors.</p>
+      <p>A quick look at the business types this structure can support without rebuilding from scratch.</p>
     </div>
     <div class="grid project-grid">
       ${profileGroups.map(group => `
@@ -70,11 +70,32 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container starter-docs-grid">
+    <div>
+      <p class="eyebrow">Built from real project patterns</p>
+      <h2>Technical starter first, client proof elsewhere</h2>
+      <p>This starter stays focused on the reusable build. Full ASR case studies belong on the ASR website, where buyers can read the project story without mixing it into the codebase.</p>
+      <a class="btn primary" href="/portfolio">View portfolio examples</a>
+    </div>
+    <div class="starter-panel">
+      <h3>Why they are separate</h3>
+      <ul class="plain-list">
+        <li>Keeps the repo lightweight and reusable</li>
+        <li>Avoids mixing client proof with starter architecture</li>
+        <li>Lets asrweb.ie act as the polished proof layer</li>
+        <li>Protects public/private publishing boundaries</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="section alt">
   <div class="container starter-docs-grid">
     <div>
-      <h2>Designed for public portfolio use</h2>
-      <p>This repository is intentionally public-safe. Real client code, private admin systems, form submissions, databases, API keys, and sensitive assets are kept out of the public version.</p>
+      <h2>Ready for public portfolio review</h2>
+      <p>This public version shows the shape of the work without exposing private client code, production data, credentials or sensitive assets.</p>
     </div>
     <div class="starter-panel">
       <h3>Useful docs</h3>

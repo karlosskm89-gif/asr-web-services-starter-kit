@@ -29,7 +29,7 @@ This repo is designed to prove more than “I can make pages”. It shows:
 - EJS layouts and reusable partials
 - profile-driven content via `TEMPLATE_PROFILE`
 - modular CSS structure with theme support
-- public pages for home, about, services, portfolio, testimonials, FAQ, contact, starter-kit, showcase, and case studies
+- public pages for home, about, services, portfolio, testimonials, FAQ, contact, starter-kit, and showcase
 - contact form validation and CSRF protection
 - basic security middleware with Helmet
 - global and contact-specific rate limiting
@@ -37,7 +37,7 @@ This repo is designed to prove more than “I can make pages”. It shows:
 - health check route for deployment checks
 - test coverage for core utility behaviour
 - fictional showcase examples for multiple business types
-- public-safe case-study pages for real project patterns
+- external case-study links can be added from the ASR website proof layer
 - docs covering setup, architecture, publishing boundaries, screenshots, and proposal usage
 
 ## Profile switching
@@ -104,15 +104,9 @@ Each showcase item includes:
 
 These are not fake client claims. They are clearly marked fictional examples showing reusable patterns and proposal/mockup thinking.
 
-## Case-study narratives
+## Case-study boundary
 
-The `/case-studies` route includes public-safe narrative pages for:
-
-- ForwardSteps Private Practice Platform
-- Aid Cancer Treatment Digital Support
-- ASR Web Services Starter Kit
-
-These pages explain business problems, solution patterns, highlights, and technology notes without publishing private code, data, admin screens, or client-specific internals.
+This starter kit is informed by real ASR project work, but full case studies are deliberately kept outside this repo. Publish those on `asrweb.ie` or as downloadable PDFs, then link to them from the live demo or README if needed.
 
 ## Example use cases
 
@@ -157,19 +151,9 @@ npm test
 /services                              Services overview
 /portfolio                             Portfolio / project cards
 /starter-kit                           Starter kit explanation and profile list
-/showcase                              Fictional showcase examples and use cases
-/showcase/oakline-decorating           Trades showcase detail
-/showcase/harbour-brew-cafe            Café showcase detail
-/showcase/luma-creative-home-base      Creator showcase detail
-/showcase/haven-wellness-practice      Wellness showcase detail
-/showcase/riverbend-community-club     Community showcase detail
-/showcase/cedar-legal-consulting        Professional services showcase detail
-/showcase/summit-fit-studio             Fitness studio showcase detail
-/showcase/bloomfield-florist            Local retail showcase detail
-/case-studies                          Public-safe case-study narratives
-/case-studies/forwardsteps-private-practice-platform
-/case-studies/aid-cancer-treatment-digital-support
-/case-studies/asr-web-services-starter-kit
+/showcase                              Redirects to Showcase Mode
+/showcase-mode                         Fictional profile selector
+/showcase-mode/:profileKey             Profile-driven demo preview
 /testimonials                          Testimonials / demo notes
 /faqs                                  Frequently asked questions
 /contact                               Contact form
@@ -222,9 +206,9 @@ ASR Web Services is a Cork-based web studio focused on practical websites and di
 The focus is on clear communication, maintainable systems, enquiry/booking flows, and long-term digital stewardship — not just surface-level design.
 
 
-## Case Study Philosophy
+## Project proof boundary
 
-The included case studies focus on operational outcomes, maintainability, and long-term organisational value rather than purely visual presentation.
+This starter kit is informed by real ASR project work, but full client case studies are deliberately kept outside the repo. Publish those on asrweb.ie or as downloadable PDFs, then link to them from the live website rather than embedding them here.
 
 
 ## Showcase Mode

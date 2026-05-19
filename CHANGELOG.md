@@ -9,6 +9,14 @@
 
 # Changelog
 
+## 2026-05-19 — Case-study separation pass
+
+- Removed full client case-study pages and source documents from the starter-kit repo.
+- Removed `/case-studies` routes from the public demo.
+- Repositioned the starter kit as a focused technical/reusable architecture demo.
+- Moved full case-study documents to the package-level `CaseStudies/` folder for website/PDF publication.
+
+
 ## 2026-05-18 — Showcase expansion pass
 
 - Added three additional fictional public-safe showcase examples:

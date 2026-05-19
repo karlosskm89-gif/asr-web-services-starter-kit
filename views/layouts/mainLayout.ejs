@@ -3,12 +3,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title><%= title || chromeBuilder?.businessName || builder?.businessName || "Website" %></title>
+  <title><%= title || chromeBuilder?.businessName || builder?.businessName || "ASR Web Services Starter Kit" %></title>
   <meta
     name="description"
-    content="<%= typeof metaDescription !== 'undefined' ? metaDescription : '' %>"
+    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="<%= typeof canonicalUrl !== 'undefined' && canonicalUrl ? canonicalUrl : 'https://asr-web-services-starter-kit.onrender.com/' %>" />
+
+  <meta property="og:site_name" content="ASR Web Services" />
+  <meta property="og:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
+  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>" />
+  <meta property="og:url" content="<%= typeof canonicalUrl !== 'undefined' && canonicalUrl ? canonicalUrl : 'https://asr-web-services-starter-kit.onrender.com/' %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
+  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>" />
+  <meta name="twitter:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
+  <meta name="twitter:creator" content="@asrweb" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/index.css" />
@@ -45,7 +62,6 @@
         <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
         <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Starter Kit</a>
         <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Showcase Mode</a>
-        <a href="/case-studies" class="<%= currentPath === 'case-studies' ? 'active' : '' %>">Case Studies</a>
         <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Testimonials</a>
         <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
         <a href="/contact" class="<%= currentPath === 'contact' ? 'active' : '' %>">Contact</a>
@@ -94,7 +110,6 @@
         <a href="/portfolio">Portfolio</a>
         <a href="/starter-kit">Starter Kit</a>
         <a href="/showcase-mode">Showcase Mode</a>
-        <a href="/case-studies">Case Studies</a>
       </div>
 
       <div class="footer-links">

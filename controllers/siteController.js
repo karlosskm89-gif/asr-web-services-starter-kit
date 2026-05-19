@@ -5,7 +5,6 @@ const { pageTitle, pageDescription } = require("../config/seoHelper");
 const { AppError } = require("../core/utils/appError");
 const { builder, loadProfile, profiles } = require("../config/profileLoader");
 const { showcaseItems, useCases, getShowcaseItem } = require("../data/showcaseItems");
-const { caseStudies, getCaseStudy } = require("../data/caseStudies");
 
 function ensureBuilder() {
   if (!builder) {
@@ -159,34 +158,6 @@ exports.showcaseDetail = (req, res, next) => {
   res.redirect(`/showcase-mode`);
 };
 
-exports.caseStudies = (req, res) => {
-  ensureBuilder();
-  res.render("case-studies", baseView({
-    title: "Case Studies | ASR Web Services Starter Kit",
-    metaDescription: "Public-safe case-study narratives showing how the starter kit approach maps to real websites, booking systems, and digital support work.",
-    currentPath: "case-studies",
-    caseStudies,
-  }));
-};
-
-exports.caseStudyDetail = (req, res, next) => {
-  ensureBuilder();
-  const item = getCaseStudy(req.params.slug);
-
-  if (!item) {
-    return next(new AppError(404, "Case study not found", {
-      isOperational: true,
-      meta: { slug: req.params.slug },
-    }));
-  }
-
-  res.render("case-study-detail", baseView({
-    title: `${item.title} | ASR Web Services Starter Kit`,
-    metaDescription: item.summary,
-    currentPath: "case-studies",
-    item,
-  }));
-};
 
 exports.testimonials = (req, res) => {
   ensureBuilder();

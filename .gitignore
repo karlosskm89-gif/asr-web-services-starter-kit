@@ -19,7 +19,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Archives / private working material
+# Archives and private working material
 archive/
 *.zip
 
@@ -27,4 +27,3 @@ archive/
 coverage/
 dist/
 build/
-git/

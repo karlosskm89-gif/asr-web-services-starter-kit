@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "ASR Web Services",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",

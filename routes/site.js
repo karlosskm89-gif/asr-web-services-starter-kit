@@ -20,8 +20,6 @@ router.get("/showcase", asyncHandler(siteController.showcase));
 router.get("/showcase-mode", asyncHandler(siteController.showcaseMode));
 router.get("/showcase-mode/:profileKey", asyncHandler(siteController.showcaseProfile));
 router.get("/showcase/:slug", asyncHandler(siteController.showcaseDetail));
-router.get("/case-studies", asyncHandler(siteController.caseStudies));
-router.get("/case-studies/:slug", asyncHandler(siteController.caseStudyDetail));
 router.get("/testimonials", asyncHandler(siteController.testimonials));
 router.get("/faqs", asyncHandler(siteController.faqs));
 router.get("/contact", asyncHandler(siteController.contact));

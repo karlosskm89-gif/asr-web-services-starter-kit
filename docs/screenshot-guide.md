@@ -13,7 +13,6 @@ Capture these from the deployed Render URL or local app:
 3. Starter Kit page desktop
 4. Showcase listing page desktop
 5. Oakline Decorating showcase detail page
-6. Case Studies listing page
 7. Contact form page
 
 ## Suggested filenames

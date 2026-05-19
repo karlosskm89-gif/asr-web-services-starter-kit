@@ -27,9 +27,9 @@ This repository is designed to be safe for public GitHub use while still showing
 ## Good future additions
 
 - screenshots in the README
-- a `/showcase` or `/case-studies` section
+- a `/showcase-mode` section for fictionalised profile demos
 - fictionalised versions of proposal mockups
-- short writeups explaining the business problem each demo solves
+- short writeups explaining the business problem each fictional demo solves
 - a small architecture diagram
 
 ## Screenshot guidance
