@@ -17,7 +17,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : "Contact Us",
+  title: typeof title !== "undefined" ? title : "Start a practical conversation",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.contactDescription || builder?.seo?.metaDescription || ""),
@@ -26,7 +26,7 @@
   body: `
 <section class="section">
   <div class="container">
-    <h1>Contact Us</h1>
+    <h1>Start a practical conversation</h1>
     <p>Use the form below and we'll get back to you shortly.</p>
 
     <form method="POST" action="/contact">

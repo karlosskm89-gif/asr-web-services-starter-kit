@@ -9,9 +9,9 @@ module.exports = {
   baseUrl: "/",
   themeKey: "corporate",
   ctaButtonText: "Start a Project",
-  brandLogo: "/assets/asr_assets/ASR_Logo_Transparent.png",
-  heroImage: "/assets/asr_assets/ASR_logo.png",
-  featureImage: "/assets/asr_assets/ASR_logo+mountainsFramed.png",
+  brandLogo: "/assets/asr_assets/ASR_Logo_Transparent.webp",
+  heroImage: "/assets/asr_assets/ASR_logo.webp",
+  featureImage: "/assets/asr_assets/ASR_logo+mountainsFramed.webp",
   footerStrip: "/assets/asr_assets/ASR_letter_foot.PNG",
   hero: {
     headline: "Practical websites and digital systems for real organisations",

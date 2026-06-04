@@ -1,25 +1,18 @@
-# Documentation Index
+# Starter Kit Documentation
 
-This folder explains how the ASR Web Services Starter Kit works and how it should be used as a public-safe portfolio/demo asset.
+Short reviewer/developer notes for the ASR Web Services Starter Kit demo.
 
-## Core documentation
+Recommended reading:
 
-- `architecture.md` — application structure and technical overview
-- `developer-guide.md` — local development notes
-- `profile-switching.md` — how `TEMPLATE_PROFILE` changes the active demo business
-- `use-cases.md` — practical uses for the starter kit
+- `architecture.md` — application structure and request flow
+- `developer-guide.md` — local setup and maintenance notes
+- `profile-switching.md` — how Showcase Mode profiles work
+- `mockup-fictionalisation.md` — public-safety boundaries for fictional/demo content
+- `public-portfolio-notes.md` — how to present the repo publicly
+- `screenshot-guide.md` — optional screenshot capture guidance
 
-## Public portfolio documentation
+Supplementary notes:
 
-- `public-readiness.md` — public repo safety notes
-- `public-portfolio-notes.md` — how this repo fits ASR portfolio positioning
-- `mockup-fictionalisation.md` — rules for turning proposal mockups into safe public examples
-- `showcase-roadmap.md` — how showcase examples are structured
-- `proposal-usage.md` — how to reference the repo in proposals without overexplaining
-- `screenshot-guide.md` — recommended screenshot captures and filenames
-- `publishing-checklist.md` — checklist before pushing public updates
-- `completion-notes.md` — what is completed and what remains optional
-
-## Older/internal notes
-
-Some older docs may remain as historical notes while the project is being polished. The README at the repo root is the canonical public-facing summary.
+- `use-cases.md` — practical uses for the starter foundation
+- `proposal-usage.md` — how the demo can support sales/proposal work
+- `showcase-roadmap.md` — future profile/demo ideas

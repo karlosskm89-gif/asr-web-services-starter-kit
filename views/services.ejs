@@ -3,7 +3,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : "Our Services",
+  title: typeof title !== "undefined" ? title : "What this system supports",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.servicesDescription || builder?.seo?.metaDescription || ""),
@@ -12,7 +12,7 @@
   body: `
 <section class="section">
   <div class="container">
-    <h1>Our Services</h1>
+    <h1>What this system supports</h1>
     <p>We offer a wide range of professional services.</p>
 
     <div class="grid services-grid">

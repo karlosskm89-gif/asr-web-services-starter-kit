@@ -7,7 +7,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : `${builder?.businessName || "Profile"} | Showcase Mode`,
+  title: typeof title !== "undefined" ? title : `${builder?.businessName || "Profile"} | Business Profile Lab`,
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.metaDescription || ""),
@@ -19,7 +19,7 @@
 <section class="showcase-mode-banner">
   <div class="container showcase-mode-banner-inner">
     <div>
-      <p class="eyebrow">Showcase Mode</p>
+      <p class="eyebrow">Business Profile Lab</p>
       <strong>${builder?.businessName || "Demo profile"}</strong>
       <span>This is a fictional/public-safe profile rendered inside the ASR starter-kit shell.</span>
     </div>
@@ -109,7 +109,7 @@ ${projects?.length ? `
       <h2>Profile-switching proof</h2>
       <p>
         This page is not a separate hard-coded website. It is the same starter-kit architecture
-        rendering a different profile object. That is the core idea behind Showcase Mode.
+        rendering a different profile object. That is the core idea behind Business Profile Lab.
       </p>
     </div>
     <aside class="starter-panel">

@@ -103,7 +103,7 @@ exports.showcaseMode = (req, res) => {
   ensureBuilder();
 
   res.render("showcase-mode", baseView({
-    title: "Showcase Mode | ASR Web Services Starter Kit",
+    title: "Business Profile Lab | ASR Web Services Starter Kit",
     metaDescription:
       "Explore profile-driven demo variants inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
     currentPath: "showcase-mode",
@@ -133,7 +133,7 @@ exports.showcaseProfile = (req, res, next) => {
   res.render("showcase-profile", showcaseView({
     builder: selectedProfile,
     pageCss,
-    title: `${selectedProfile.businessName} | Showcase Mode`,
+    title: `${selectedProfile.businessName} | Business Profile Lab`,
     metaDescription:
       selectedProfile.seo?.metaDescription ||
       selectedProfile.hero?.subheadline ||

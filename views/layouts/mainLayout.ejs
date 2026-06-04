@@ -6,7 +6,7 @@
   <title><%= title || chromeBuilder?.businessName || builder?.businessName || "ASR Web Services Starter Kit" %></title>
   <meta
     name="description"
-    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>"
+    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow" />
@@ -14,14 +14,14 @@
 
   <meta property="og:site_name" content="ASR Web Services" />
   <meta property="og:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>" />
+  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>" />
   <meta property="og:url" content="<%= typeof canonicalUrl !== 'undefined' && canonicalUrl ? canonicalUrl : 'https://asr-web-services-starter-kit.onrender.com/' %>" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Showcase Mode and public-safe ASR demo ecosystem.' %>" />
+  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>" />
   <meta name="twitter:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
   <meta name="twitter:creator" content="@asrweb" />
 
@@ -61,8 +61,8 @@
         <a href="/services" class="<%= currentPath === 'services' ? 'active' : '' %>">Services</a>
         <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
         <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Starter Kit</a>
-        <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Showcase Mode</a>
-        <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Testimonials</a>
+        <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Profile Lab</a>
+        <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Client Signals</a>
         <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
         <a href="/contact" class="<%= currentPath === 'contact' ? 'active' : '' %>">Contact</a>
       </nav>
@@ -86,7 +86,7 @@
   <footer class="site-footer">
     <% if (chromeBuilder?.footerStrip) { %>
       <div class="footer-strip" aria-hidden="true">
-        <img src="<%= chromeBuilder.footerStrip %>" alt="">
+        <img src="<%= chromeBuilder.footerStrip %>" alt="" role="presentation" loading="lazy">
       </div>
     <% } %>
 
@@ -109,12 +109,12 @@
         <a href="/services">Services</a>
         <a href="/portfolio">Portfolio</a>
         <a href="/starter-kit">Starter Kit</a>
-        <a href="/showcase-mode">Showcase Mode</a>
+        <a href="/showcase-mode">Profile Lab</a>
       </div>
 
       <div class="footer-links">
         <strong>Resources</strong>
-        <a href="/testimonials">Testimonials</a>
+        <a href="/testimonials">Client Signals</a>
         <a href="/faqs">FAQ</a>
         <a href="/contact">Contact</a>
       </div>

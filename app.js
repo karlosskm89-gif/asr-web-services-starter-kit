@@ -67,6 +67,15 @@ app.set("views", path.join(__dirname, "views"));
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use((req, res, next) => {
+  const host = req.get("host") || "localhost:3000";
+  const protocol = req.get("x-forwarded-proto") || req.protocol || "http";
+  const origin = process.env.PUBLIC_SITE_URL || `${protocol}://${host}`;
+  res.locals.canonicalUrl = `${origin}${req.path === "/" ? "/" : req.path}`;
+  next();
+});
+
+
 // --------------------------------------------------
 // CSRF setup
 // --------------------------------------------------
@@ -103,23 +112,22 @@ function countRoutes(appInstance) {
 countRoutes(app);
 
 // --------------------------------------------------
-// Config check + startup log
+// Startup checks + listen only when this file is run directly
 // --------------------------------------------------
-runConfigCheck();
-logStartup(builder);
+if (require.main === module) {
+  runConfigCheck();
+  logStartup(builder);
 
-// --------------------------------------------------
-// Listen
-// --------------------------------------------------
-const PORT = getInt("PORT", 3000);
+  const PORT = getInt("PORT", 3000);
 
-const server = app.listen(PORT, () => {
-  console.log(
-    `ASR Web Services Starter Kit running on http://localhost:${PORT}`
-  );
-});
+  const server = app.listen(PORT, () => {
+    console.log(
+      `ASR Web Services Starter Kit running on http://localhost:${PORT}`
+    );
+  });
 
-// Register shutdown hooks for the actual HTTP server
-registerShutdown(server);
+  // Register shutdown hooks for the actual HTTP server
+  registerShutdown(server);
+}
 
 module.exports = app;

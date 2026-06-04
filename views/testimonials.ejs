@@ -3,7 +3,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : "Testimonials",
+  title: typeof title !== "undefined" ? title : "Client Signals",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.testimonialsDescription || builder?.seo?.metaDescription || ""),
@@ -12,7 +12,7 @@
   body: `
 <section class="section">
   <div class="container">
-    <h1>Testimonials</h1>
+    <h1>Client Signals</h1>
 
     <div class="testimonials-list">
       ${testimonials.length

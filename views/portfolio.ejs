@@ -3,7 +3,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : "Our Work",
+  title: typeof title !== "undefined" ? title : "Proof of Work",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.portfolioDescription || builder?.seo?.metaDescription || ""),
@@ -12,8 +12,8 @@
   body: `
 <section class="section">
   <div class="container">
-    <h1>Our Work</h1>
-    <p>A selection of recent projects.</p>
+    <h1>Proof of Work</h1>
+    <p>A compact look at the kind of practical systems and service-business sites this starter can support.</p>
 
     <div class="grid project-grid">
       ${projects.map(p => `

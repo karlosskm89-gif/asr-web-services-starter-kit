@@ -1,9 +1,13 @@
 // core/middleware/rateLimiter.js
 const { createRateLimiter } = require("../utils/rateUtil");
 
-const rateLimiter =
-  process.env.NODE_ENV === "production"
-    ? createRateLimiter()              // your real options
-    : (req, res, next) => next();      // no-op in dev 
-  
-module.exports = { rateLimiter };
+const shouldBypassRateLimit =
+  process.env.NODE_ENV === "test" ||
+  process.env.BYPASS_RATE_LIMIT === "true" ||
+  process.env.ASR_TEST_BYPASS_RATE_LIMIT === "true";
+
+const rateLimiter = shouldBypassRateLimit
+  ? (req, res, next) => next()
+  : createRateLimiter();
+
+module.exports = { rateLimiter, shouldBypassRateLimit };

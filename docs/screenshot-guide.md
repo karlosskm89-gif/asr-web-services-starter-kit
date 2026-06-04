@@ -17,7 +17,7 @@ Capture these from the deployed Render URL or local app:
 
 ## Suggested filenames
 
-Place PNGs in `screenshots/` using these names:
+If screenshots are added for a public release, place PNGs in a local or tracked `screenshots/` folder using clear names such as:
 
 ```text
 homepage-desktop.png
@@ -36,8 +36,14 @@ Once screenshots exist, add them near the top of `README.md`, for example:
 ```md
 ## Preview
 
-![Homepage preview](screenshots/homepage-desktop.png)
-![Showcase preview](screenshots/showcase-desktop.png)
+Suggested screenshot names:
+
+```text
+homepage-desktop.png
+showcase-desktop.png
+mobile-home.png
+mobile-contact.png
+```
 ```
 
 ## Capture tips

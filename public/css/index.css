@@ -24,12 +24,9 @@
 /* 30-pages */
 @import "./30-pages/home.css";
 @import "./30-pages/services.css";
-@import "./30-pages/compare.css";
-@import "./30-pages/loyalty.css";
 @import "./30-pages/about.css";
 @import "./30-pages/portfolio.css";
 @import "./30-pages/contact.css";
-@import "./30-pages/quote.css";
 @import "./30-pages/faq.css";
 @import "./30-pages/starter-kit.css";
 @import "./30-pages/showcase.css";
@@ -38,6 +35,5 @@
 @import "./99-responsive/responsive-layout.css";
 @import "./99-responsive/responsive-header.css";
 @import "./99-responsive/responsive-nav.css";
-@import "./99-responsive/responsive-compare.css";
 @import "./99-responsive/responsive-cards.css";
 @import "./99-responsive/responsive-sections.css";
