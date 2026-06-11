@@ -31,7 +31,7 @@ Examples:
 This repo gives public evidence of:
 
 - Express/EJS structure
-- profile-driven content
+- example-driven content
 - reusable view patterns
 - contact form handling
 - documentation habits

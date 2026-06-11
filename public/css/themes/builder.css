@@ -1,28 +1,54 @@
-/* Slightly more rugged / construction feel */
+/* Builder / trades – rugged, direct, practical */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #fff, #faf7ef);
 }
 
 .site-header {
-  border-bottom: 4px solid rgba(255, 166, 0, 0.3);
+  border-bottom: 4px solid rgba(255, 166, 0, 0.45);
+  background: #fffdf7;
 }
 
 .brand-name {
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.btn.primary {
-  border-radius: 0;
-  font-weight: 600;
+.main-nav a {
+  font-weight: 700;
 }
 
-/* Cards (services, projects, testimonials) */
+.hero,
+.section:first-of-type {
+  background: linear-gradient(135deg, rgba(255, 166, 0, 0.16), rgba(44, 62, 80, 0.08));
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+.btn.primary,
+.header-button {
+  border-radius: 0.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .service-card,
 .project-card,
-.testimonial-card {
+.testimonial-card,
+.showcase-mode-card {
   border-radius: 0.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(44, 62, 80, 0.14);
+  box-shadow: 0.35rem 0.35rem 0 rgba(255, 166, 0, 0.14);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

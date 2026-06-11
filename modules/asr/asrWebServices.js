@@ -72,7 +72,7 @@ module.exports = {
     },
     {
       q: "Can the content be changed for different businesses?",
-      a: "Yes. The app is profile-driven, so different demo business profiles can be loaded without rebuilding the core Express/EJS structure.",
+      a: "Yes. The app is example-driven, so different demo business profiles can be loaded without rebuilding the core Express/EJS structure.",
     },
     {
       q: "What kind of work does ASR focus on?",
@@ -120,7 +120,7 @@ module.exports = {
       image: "/assets/img/asr-starter-kit.svg",
       features: [
         "Reusable layouts",
-        "Profile-driven content",
+        "Example-driven content",
         "Responsive service-business structure",
       ],
       tags: ["Starter Kit", "Express", "EJS"],
@@ -152,7 +152,7 @@ module.exports = {
       },
       {
         heading: "Built for maintainability",
-        text: "This starter kit demonstrates a profile-driven Express/EJS structure that can be adapted for different small-business scenarios while keeping the codebase understandable.",
+        text: "This starter kit demonstrates a example-driven Express/EJS structure that can be adapted for different small-business scenarios while keeping the codebase understandable.",
       },
     ],
   },

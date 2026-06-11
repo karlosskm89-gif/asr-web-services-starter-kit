@@ -8,7 +8,7 @@ Active brand assets:
 - `public/assets/asr_assets/ASR_logo.webp` — core ASR profile hero image
 - `public/assets/asr_assets/ASR_logo+mountainsFramed.webp` — feature/supporting image
 - `public/assets/asr_assets/ASR_letter_foot.PNG` — footer strip
-- `public/img/asr-og-portfolio-mountain-qr.jpg` — social preview image
+- `public/img/asr-og-portfolio-mountain-qr.webp` — social preview image
 - `public/favicon.ico` — compact generated favicon for browser tabs
 
 The goal is visual connection, not duplication. The Starter Kit should feel related to the main ASR website and Operational Systems demo without pretending to be the main business site.

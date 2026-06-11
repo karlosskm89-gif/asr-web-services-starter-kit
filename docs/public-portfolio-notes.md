@@ -5,7 +5,7 @@ This repository is designed to be safe for public GitHub use while still showing
 ## What is public here
 
 - reusable Express/EJS structure
-- demo profiles
+- industry examples
 - placeholder/demo content
 - public-safe ASR branding
 - sample contact and inquiry flow

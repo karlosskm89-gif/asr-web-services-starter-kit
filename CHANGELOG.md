@@ -5,7 +5,7 @@
 - Added `/showcase-mode` profile selector.
 - Added `/showcase-mode/:profileKey` demo preview routes.
 - Preserved legacy `/showcase` redirects for older links.
-- Added ASR shell support so demo profiles render inside ASR-branded chrome.
+- Added ASR shell support so industry examples render inside ASR-branded chrome.
 
 # Changelog
 

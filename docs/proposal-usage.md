@@ -6,7 +6,7 @@ This starter kit can be referenced in proposals when a client asks for a website
 
 Use language like:
 
-> I maintain a public starter kit that shows how I structure small-business websites, enquiry flows, profile-driven content, and reusable Express/EJS components without exposing private client code.
+> I maintain a public starter kit that shows how I structure small-business websites, enquiry flows, example-driven content, and reusable Express/EJS components without exposing private client code.
 
 ## When to link it
 
@@ -31,4 +31,4 @@ Poor fit:
 
 ## Longer proposal line
 
-> For context, I keep a public Express/EJS starter kit that demonstrates my approach to reusable small-business websites: profile-driven content, contact/enquiry flows, showcase examples, and public-safe case-study narratives. It does not expose private client work, but it gives a clear idea of how I structure projects.
+> For context, I keep a public Express/EJS starter kit that demonstrates my approach to reusable small-business websites: example-driven content, contact/enquiry flows, showcase examples, and public-safe case-study narratives. It does not expose private client work, but it gives a clear idea of how I structure projects.

@@ -1,0 +1,443 @@
+/* ============================================
+   Starter Kit Configurator Layer
+   Visitor-facing variation classes layered above profile themes.
+   ============================================ */
+
+.configurator-panel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(28, 41, 90, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0.75rem 2rem rgba(28, 41, 90, 0.08);
+}
+
+.configurator-panel h2,
+.configurator-panel h3 {
+  margin-top: 0;
+}
+
+.configurator-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.configurator-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.configurator-group strong {
+  font-size: 0.86rem;
+}
+
+.configurator-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.configurator-options a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(28, 41, 90, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.86rem;
+}
+
+.configurator-options a:hover,
+.configurator-options a:focus {
+  border-color: rgba(164, 41, 30, 0.45);
+  background: rgba(164, 41, 30, 0.06);
+}
+
+/* Layout density */
+.layout-compact section,
+.layout-compact .section {
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+  padding-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.layout-spacious section,
+.layout-spacious .section {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+/* Grid density */
+@media (min-width: 980px) {
+  .grid-2 .services-grid,
+  .grid-2 .project-grid,
+  .grid-2 .showcase-mode-grid,
+  .grid-2 .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 .services-grid,
+  .grid-3 .project-grid,
+  .grid-3 .showcase-mode-grid,
+  .grid-3 .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid-4 .services-grid,
+  .grid-4 .project-grid,
+  .grid-4 .showcase-mode-grid,
+  .grid-4 .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Navigation styles */
+.nav-pill .main-nav {
+  gap: 0.35rem;
+}
+
+.nav-pill .main-nav a {
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.nav-underline .main-nav a {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-underline .main-nav a:hover,
+.nav-underline .main-nav a:focus,
+.nav-underline .main-nav a.active {
+  border-bottom-color: currentColor;
+}
+
+.nav-boxed .main-nav a {
+  border: 1px solid rgba(28, 41, 90, 0.14);
+  border-radius: 0.35rem;
+  padding: 0.45rem 0.7rem;
+}
+
+/* Card styles */
+.cards-soft .service-card,
+.cards-soft .project-card,
+.cards-soft .testimonial-card,
+.cards-soft .showcase-mode-card {
+  border-radius: 1.2rem;
+  box-shadow: 0 0.8rem 2rem rgba(28, 41, 90, 0.08);
+}
+
+.cards-sharp .service-card,
+.cards-sharp .project-card,
+.cards-sharp .testimonial-card,
+.cards-sharp .showcase-mode-card {
+  border-radius: 0.25rem;
+  box-shadow: none;
+}
+
+.cards-elevated .service-card,
+.cards-elevated .project-card,
+.cards-elevated .testimonial-card,
+.cards-elevated .showcase-mode-card {
+  border-color: rgba(28, 41, 90, 0.08);
+  box-shadow: 0 1rem 2.5rem rgba(28, 41, 90, 0.14);
+}
+
+/* Background styles */
+.bg-clean {
+  background: #ffffff;
+}
+
+.bg-paper {
+  background:
+    linear-gradient(180deg, rgba(255, 251, 232, 0.72), rgba(255,255,255,0.92)),
+    #fffdf7;
+}
+
+.bg-wash {
+  background:
+    radial-gradient(circle at top left, rgba(244, 197, 41, 0.16), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(28, 41, 90, 0.10), transparent 34rem),
+    #fff;
+}
+
+/* Font moods */
+.font-system {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font-serif h1,
+.font-serif h2,
+.font-serif h3,
+.font-serif .brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.font-compact {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-compact h1,
+.font-compact h2,
+.font-compact h3 {
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 780px) {
+  .configurator-groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Extended configurator controls */
+
+/* Button style */
+.buttons-rounded .btn,
+.buttons-rounded .header-button {
+  border-radius: 999px;
+}
+
+.buttons-square .btn,
+.buttons-square .header-button {
+  border-radius: 0.18rem;
+}
+
+.buttons-bold .btn,
+.buttons-bold .header-button {
+  border-radius: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  box-shadow: 0 0.5rem 1.2rem rgba(28, 41, 90, 0.14);
+}
+
+/* Hero layout */
+.hero-centred .hero-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-items: center;
+}
+
+.hero-centred .hero-copy,
+.hero-centred .lead,
+.hero-centred .hero-copy p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-centred .hero-ctas,
+.hero-centred .hero-badges {
+  justify-content: center;
+}
+
+.hero-compact .hero,
+.hero-compact .starter-hero,
+.hero-compact .showcase-mode-hero {
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+  padding-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.hero-compact .hero-grid {
+  gap: 1rem;
+}
+
+.hero-compact .hero-copy h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+/* Image treatment */
+.images-framed .hero-visual-card,
+.images-framed .project-card img,
+.images-framed .showcase-preview-frame,
+.images-framed .showcase-mode-logo {
+  border: 0.45rem solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1rem 2.3rem rgba(28, 41, 90, 0.16);
+}
+
+.images-full .hero-visual-card,
+.images-full .showcase-preview-frame,
+.images-full .project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.images-full .hero-visual-card img,
+.images-full .showcase-preview-frame img,
+.images-full .project-card img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.images-minimal .hero-visual-card,
+.images-minimal .showcase-preview-frame,
+.images-minimal .project-card img,
+.images-minimal .showcase-mode-logo {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
+/* Section rhythm */
+.rhythm-plain .section,
+.rhythm-plain section {
+  background: transparent !important;
+}
+
+.rhythm-alternating .section:nth-of-type(even),
+.rhythm-alternating section:nth-of-type(even) {
+  background: rgba(28, 41, 90, 0.035);
+}
+
+.rhythm-highlighted .section:nth-of-type(3n),
+.rhythm-highlighted section:nth-of-type(3n) {
+  background:
+    linear-gradient(135deg, rgba(244, 197, 41, 0.13), rgba(28, 41, 90, 0.06)),
+    rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(28, 41, 90, 0.08);
+  border-bottom: 1px solid rgba(28, 41, 90, 0.08);
+}
+
+/* Collapsible section mode */
+.sections-collapsible .collapsible-section {
+  border-top: 1px solid rgba(28, 41, 90, 0.12);
+  border-bottom: 1px solid rgba(28, 41, 90, 0.08);
+}
+
+.sections-collapsible details.collapsible-section > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.sections-collapsible details.collapsible-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.sections-collapsible details.collapsible-section > summary .section-heading {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.sections-collapsible details.collapsible-section > summary .section-heading::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(28, 41, 90, 0.16);
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.sections-collapsible details.collapsible-section[open] > summary .section-heading::after {
+  content: "–";
+}
+
+/* Nav layout modes */
+.nav-side .site-header .header-inner {
+  align-items: flex-start;
+}
+
+@media (min-width: 980px) {
+  .nav-side .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .nav-side .header-inner {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(220px, 1fr) auto;
+  }
+
+  .nav-side .main-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    align-items: stretch;
+    justify-self: start;
+  }
+
+  .nav-side .main-nav a {
+    border-left: 3px solid transparent;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .nav-side .main-nav a:hover,
+  .nav-side .main-nav a:focus,
+  .nav-side .main-nav a.active {
+    border-left-color: currentColor;
+    background: rgba(28, 41, 90, 0.05);
+  }
+}
+
+.nav-compact .main-nav a {
+  padding: 0.3rem 0.45rem;
+  font-size: 0.9rem;
+}
+
+.nav-condensed .main-nav {
+  max-height: 3.1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-condensed .main-nav::after {
+  content: "More";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(28, 41, 90, 0.14);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* CTA tone */
+.cta-direct .hero-ctas .btn.primary,
+.cta-direct .header-button {
+  font-weight: 900;
+}
+
+.cta-soft .hero-ctas .btn.primary,
+.cta-soft .header-button {
+  background: rgba(28, 41, 90, 0.08);
+  color: inherit;
+  border: 1px solid rgba(28, 41, 90, 0.16);
+}
+
+.cta-campaign .hero-ctas .btn.primary,
+.cta-campaign .header-button {
+  background: linear-gradient(135deg, var(--asr-red, #A4291E), var(--asr-gold, #F4C529));
+  color: #fff;
+  box-shadow: 0 0.85rem 1.8rem rgba(164, 41, 30, 0.22);
+}
+
+/* Keep config panel usable as options grow */
+.configurator-panel .configurator-groups {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 1080px) {
+  .configurator-panel .configurator-groups {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.configurator-options a.is-active,
+.configurator-options a[aria-current="true"] {
+  border-color: rgba(164, 41, 30, 0.55);
+  background: rgba(164, 41, 30, 0.10);
+  font-weight: 800;
+}

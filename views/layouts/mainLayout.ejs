@@ -6,7 +6,7 @@
   <title><%= title || chromeBuilder?.businessName || builder?.businessName || "ASR Web Services Starter Kit" %></title>
   <meta
     name="description"
-    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>"
+    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow" />
@@ -14,15 +14,15 @@
 
   <meta property="og:site_name" content="ASR Web Services" />
   <meta property="og:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>" />
+  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>" />
   <meta property="og:url" content="<%= typeof canonicalUrl !== 'undefined' && canonicalUrl ? canonicalUrl : 'https://asr-web-services-starter-kit.onrender.com/' %>" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
+  <meta property="og:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Profile Lab and public-safe ASR demo ecosystem.' %>" />
-  <meta name="twitter:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.jpg" />
+  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>" />
+  <meta name="twitter:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.webp" />
   <meta name="twitter:creator" content="@asrweb" />
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -38,6 +38,18 @@
 <body class="
   profile-<%= builder?._profileKey || 'default' %>
   theme-<%= builder?.themeKey || 'default' %>
+  layout-<%= (typeof design !== 'undefined' && design?.layout) ? design.layout : 'balanced' %>
+  grid-<%= (typeof design !== 'undefined' && design?.grid) ? design.grid : '3' %>
+  nav-<%= (typeof design !== 'undefined' && design?.nav) ? design.nav : 'default' %>
+  cards-<%= (typeof design !== 'undefined' && design?.cards) ? design.cards : 'soft' %>
+  bg-<%= (typeof design !== 'undefined' && design?.background) ? design.background : 'clean' %>
+  font-<%= (typeof design !== 'undefined' && design?.font) ? design.font : 'system' %>
+  buttons-<%= (typeof design !== 'undefined' && design?.buttons) ? design.buttons : 'rounded' %>
+  hero-<%= (typeof design !== 'undefined' && design?.hero) ? design.hero : 'split' %>
+  images-<%= (typeof design !== 'undefined' && design?.images) ? design.images : 'framed' %>
+  rhythm-<%= (typeof design !== 'undefined' && design?.rhythm) ? design.rhythm : 'alternating' %>
+  sections-<%= (typeof design !== 'undefined' && design?.sections) ? design.sections : 'standard' %>
+  cta-<%= (typeof design !== 'undefined' && design?.cta) ? design.cta : 'direct' %>
 ">
   <header class="site-header">
     <div class="container header-inner">
@@ -61,7 +73,7 @@
         <a href="/services" class="<%= currentPath === 'services' ? 'active' : '' %>">Services</a>
         <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
         <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Starter Kit</a>
-        <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Profile Lab</a>
+        <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Industry Examples</a>
         <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Client Signals</a>
         <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
         <a href="/contact" class="<%= currentPath === 'contact' ? 'active' : '' %>">Contact</a>
@@ -109,7 +121,7 @@
         <a href="/services">Services</a>
         <a href="/portfolio">Portfolio</a>
         <a href="/starter-kit">Starter Kit</a>
-        <a href="/showcase-mode">Profile Lab</a>
+        <a href="/showcase-mode">Industry Examples</a>
       </div>
 
       <div class="footer-links">
@@ -161,5 +173,6 @@
       <% } %>
     </div>
   </footer>
+  <script src="/js/configurator.js" defer></script>
 </body>
 </html>

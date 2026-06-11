@@ -1,32 +1,54 @@
-/* Softer, “supportive professional” vibe */
+/* Coach / wellbeing – calm, supportive, spacious */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+  background:
+    linear-gradient(180deg, rgba(52, 152, 219, 0.08), rgba(255,255,255,0.95)),
+    #fff;
 }
 
 .site-header {
-  border-bottom: 3px solid rgba(52, 152, 219, 0.25);
+  border-bottom: 3px solid rgba(52, 152, 219, 0.24);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .brand-name {
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.main-nav a {
+  border-radius: 999px;
 }
 
 .btn.primary {
   border-radius: 999px;
-  padding-inline: 1.5rem;
-  font-weight: 500;
+  padding-inline: 1.55rem;
+  font-weight: 700;
 }
 
-/* Sections */
 .section {
-  padding-block: 3rem;
+  padding-block: 4rem;
 }
 
-/* Cards feel a bit more rounded */
+.hero-grid,
+.starter-grid,
+.starter-docs-grid {
+  gap: 2.5rem;
+}
+
 .service-card,
 .project-card,
-.testimonial-card {
-  border-radius: 0.75rem;
-  border: 1px solid rgba(52, 152, 219, 0.15);
+.testimonial-card,
+.showcase-mode-card {
+  border-radius: 1.15rem;
+  border: 1px solid rgba(52, 152, 219, 0.16);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

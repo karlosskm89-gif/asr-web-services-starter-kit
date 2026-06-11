@@ -1,31 +1,56 @@
-/* Entertainer – bold, playful, a little louder */
+/* Entertainer – bold, punchy, promotional */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(231, 76, 60, 0.16), transparent 28rem),
+    #fff;
 }
 
 .site-header {
-  border-bottom: 4px solid rgba(231, 76, 60, 0.5);
+  border-bottom: 4px solid rgba(231, 76, 60, 0.58);
+  background: #fff;
 }
 
 .brand-name {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.main-nav a {
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.main-nav a {
-  font-weight: 600;
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
 }
 
-/* Sections alternate soft backgrounds for energy */
 .section:nth-of-type(odd) {
-  background: rgba(231, 76, 60, 0.03);
+  background: rgba(231, 76, 60, 0.045);
 }
 
-/* Cards a little more “poster” like */
+.btn.primary {
+  border-radius: 0.7rem;
+  transform: rotate(-0.5deg);
+  font-weight: 900;
+}
+
 .service-card,
 .project-card,
-.testimonial-card {
+.testimonial-card,
+.showcase-mode-card {
   border-radius: 1rem;
-  border: 2px solid rgba(231, 76, 60, 0.15);
+  border: 2px solid rgba(231, 76, 60, 0.18);
+  box-shadow: 0.45rem 0.45rem 0 rgba(231, 76, 60, 0.10);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

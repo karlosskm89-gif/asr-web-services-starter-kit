@@ -1,30 +1,48 @@
-/* Non-profit / community – calm, friendly, trustworthy */
+/* Non-profit / community – calm, trustworthy, relationship-led */
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(39, 174, 96, 0.08), rgba(255,255,255,0.96)),
+    #fff;
 }
 
 .site-header {
-  border-bottom: 3px solid rgba(39, 174, 96, 0.3);
+  border-bottom: 3px solid rgba(39, 174, 96, 0.30);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .brand-name {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .section {
-  padding-block: 3rem;
+  padding-block: 3.25rem;
 }
 
-/* Gentle background wash on alternate sections */
 .section:nth-of-type(odd) {
-  background: rgba(39, 174, 96, 0.04);
+  background: rgba(39, 174, 96, 0.045);
 }
 
-/* Cards with soft corners and subtle borders */
+.btn.primary {
+  border-radius: 0.9rem;
+  font-weight: 800;
+}
+
 .service-card,
 .project-card,
-.testimonial-card {
-  border-radius: 0.75rem;
-  border: 1px solid rgba(39, 174, 96, 0.2);
+.testimonial-card,
+.showcase-mode-card {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(39, 174, 96, 0.22);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.75rem 2rem rgba(39, 174, 96, 0.09);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

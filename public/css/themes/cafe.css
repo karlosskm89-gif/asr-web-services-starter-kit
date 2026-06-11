@@ -1,31 +1,52 @@
-/* Cafe / restaurant vibe – warm and inviting */
+/* Café / hospitality – warm, soft, inviting */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(160, 82, 45, 0.12), transparent 28rem),
+    #fff8f0;
 }
 
 .site-header {
   border-bottom: 3px solid rgba(160, 82, 45, 0.25);
+  background: rgba(255, 248, 240, 0.96);
 }
 
 .brand-name {
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.main-nav a {
+  border-radius: 999px;
 }
 
 .section:nth-of-type(odd) {
-  background: rgba(255, 248, 240, 0.8);
+  background: rgba(255, 248, 240, 0.82);
 }
 
-/* Buttons a touch softer */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 .btn.primary {
   border-radius: 999px;
-  padding-inline: 1.4rem;
+  padding-inline: 1.5rem;
 }
 
-/* Cards with light “menu card” style */
 .service-card,
 .project-card,
-.testimonial-card {
-  border-radius: 0.75rem;
-  border: 1px solid rgba(160, 82, 45, 0.15);
+.testimonial-card,
+.showcase-mode-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(160, 82, 45, 0.18);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 1rem 2rem rgba(160, 82, 45, 0.10);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

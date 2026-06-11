@@ -1,31 +1,46 @@
-/* Corporate / professional – clean, structured */
+/* Corporate / professional – structured, formal, calm */
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f9fc;
 }
 
 .site-header {
-  border-bottom: 3px solid rgba(44, 62, 80, 0.3);
+  border-bottom: 1px solid rgba(44, 62, 80, 0.22);
+  background: rgba(255,255,255,0.96);
 }
 
 .brand-name {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .main-nav a {
   text-transform: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Sections a bit more spacious */
+.hero,
+.section:first-of-type {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.10), rgba(255,255,255,0.92));
+}
+
 .section {
-  padding-block: 3.5rem;
+  padding-block: 3.75rem;
 }
 
-/* Cards with subtle borders + squared-ish corners */
 .service-card,
 .project-card,
-.testimonial-card {
-  border-radius: 0.5rem;
-  border: 1px solid rgba(44, 62, 80, 0.15);
+.testimonial-card,
+.showcase-mode-card {
+  border-radius: 0.55rem;
+  border: 1px solid rgba(44, 62, 80, 0.14);
+  box-shadow: 0 0.65rem 1.8rem rgba(44, 62, 80, 0.08);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

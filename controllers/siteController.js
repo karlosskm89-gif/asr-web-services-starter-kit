@@ -6,6 +6,36 @@ const { AppError } = require("../core/utils/appError");
 const { builder, loadProfile, profiles } = require("../config/profileLoader");
 const { showcaseItems, useCases, getShowcaseItem } = require("../data/showcaseItems");
 
+
+function pickOption(value, allowed, fallback) {
+  return allowed.includes(value) ? value : fallback;
+}
+
+function designOptions(query = {}) {
+  return {
+    layout: pickOption(query.layout, ["compact", "balanced", "spacious"], "balanced"),
+    grid: pickOption(query.grid, ["2", "3", "4"], "3"),
+    nav: pickOption(query.nav, ["default", "pill", "underline", "boxed", "side", "compact", "condensed"], "default"),
+    cards: pickOption(query.cards, ["soft", "sharp", "elevated"], "soft"),
+    background: pickOption(query.background, ["clean", "paper", "wash"], "clean"),
+    font: pickOption(query.font, ["system", "serif", "compact"], "system"),
+    buttons: pickOption(query.buttons, ["rounded", "square", "bold"], "rounded"),
+    hero: pickOption(query.hero, ["split", "centred", "compact"], "split"),
+    images: pickOption(query.images, ["framed", "full", "minimal"], "framed"),
+    rhythm: pickOption(query.rhythm, ["alternating", "plain", "highlighted"], "alternating"),
+    sections: pickOption(query.sections, ["standard", "collapsible"], "standard"),
+    cta: pickOption(query.cta, ["direct", "soft", "campaign"], "direct"),
+  };
+}
+
+function designQueryString(design = {}) {
+  const params = new URLSearchParams();
+  Object.entries(design).forEach(([key, value]) => {
+    if (value) params.set(key, value);
+  });
+  return params.toString();
+}
+
 function ensureBuilder() {
   if (!builder) {
     throw new AppError(500, "Profile configuration is missing", {
@@ -49,7 +79,7 @@ function profileSummary(key) {
       profile.hero?.subheadline ||
       profile.about?.intro ||
       profile.seo?.metaDescription ||
-      "Profile-driven demo variant.",
+      "Example-driven demo variant.",
     badges: Array.isArray(profile.hero?.badges) ? profile.hero.badges : [],
     logo: profile.brandLogo || profile.heroImage || null,
   };
@@ -102,10 +132,13 @@ exports.showcase = (req, res) => {
 exports.showcaseMode = (req, res) => {
   ensureBuilder();
 
+  const design = designOptions(req.query);
   res.render("showcase-mode", baseView({
-    title: "Business Profile Lab | ASR Web Services Starter Kit",
+    design,
+    designQuery: designQueryString(design),
+    title: "Industry Examples | ASR Web Services Starter Kit",
     metaDescription:
-      "Explore profile-driven demo variants inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
+      "Explore example-driven demo variants inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
     currentPath: "showcase-mode",
     profiles: allShowcaseProfiles(),
     asrProfile: profileSummary("asrWebServices"),
@@ -130,14 +163,17 @@ exports.showcaseProfile = (req, res, next) => {
     selectedProfile.pageCss ||
     (selectedProfile.themeKey ? `/css/themes/${selectedProfile.themeKey}.css` : null);
 
+  const design = designOptions(req.query);
   res.render("showcase-profile", showcaseView({
     builder: selectedProfile,
+    design,
+    designQuery: designQueryString(design),
     pageCss,
-    title: `${selectedProfile.businessName} | Business Profile Lab`,
+    title: `${selectedProfile.businessName} | Industry Examples`,
     metaDescription:
       selectedProfile.seo?.metaDescription ||
       selectedProfile.hero?.subheadline ||
-      "Profile-driven demo variant inside the ASR Web Services Starter Kit.",
+      "Example-driven demo variant inside the ASR Web Services Starter Kit.",
     currentPath: "showcase-mode",
     profiles: allShowcaseProfiles(),
     selectedKey: key,
@@ -175,7 +211,7 @@ exports.starterKit = (req, res) => {
   ensureBuilder();
   res.render("starter-kit", baseView({
     title: "ASR Web Services Starter Kit",
-    metaDescription: "Profile-driven Express and EJS starter system for small-business websites, booking flows, and enquiry-driven demos.",
+    metaDescription: "Example-driven Express and EJS starter system for small-business websites, booking flows, and enquiry-driven demos.",
     currentPath: "starter-kit",
   }));
 };

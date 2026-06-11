@@ -1,31 +1,49 @@
-/* Artist / creative – a bit more expressive */
+/* Artist / creative – expressive, visual, gallery-like */
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(155, 89, 182, 0.18), transparent 24rem),
+    radial-gradient(circle at 85% 5%, rgba(244, 197, 41, 0.16), transparent 22rem),
+    #fff;
 }
 
 .site-header {
-  border-bottom: 2px solid rgba(155, 89, 182, 0.4);
+  border-bottom: 2px solid rgba(155, 89, 182, 0.38);
 }
 
 .brand-name {
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  letter-spacing: 0.055em;
 }
 
 h1, h2, h3 {
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
 }
 
-/* Hero / top section has a subtle wash */
+.hero,
 .section:first-of-type {
-  background: radial-gradient(circle at top left, rgba(155, 89, 182, 0.08), transparent);
+  background: radial-gradient(circle at top left, rgba(155, 89, 182, 0.12), transparent 32rem);
 }
 
-/* Cards a bit more “gallery” like */
 .service-card,
 .project-card,
-.testimonial-card {
-  border-radius: 1rem;
-  border: 1px solid rgba(155, 89, 182, 0.2);
+.testimonial-card,
+.showcase-mode-card {
+  border-radius: 1.5rem 0.65rem 1.5rem 0.65rem;
+  border: 1px solid rgba(155, 89, 182, 0.22);
+  box-shadow: 0 1rem 2.5rem rgba(155, 89, 182, 0.10);
+}
+
+.project-card img,
+.hero-visual-card img {
+  filter: saturate(1.08) contrast(1.02);
+}
+
+@media (min-width: 980px) {
+  .services-grid,
+  .project-grid,
+  .showcase-mode-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

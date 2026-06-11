@@ -1,18 +1,16 @@
 # Starter Kit Documentation
 
-Short reviewer/developer notes for the ASR Web Services Starter Kit demo.
+Supporting documentation for the ASR Web Services Starter Kit.
 
-Recommended reading:
+## Current documents
 
-- `architecture.md` — application structure and request flow
-- `developer-guide.md` — local setup and maintenance notes
-- `profile-switching.md` — how Showcase Mode profiles work
-- `mockup-fictionalisation.md` — public-safety boundaries for fictional/demo content
-- `public-portfolio-notes.md` — how to present the repo publicly
-- `screenshot-guide.md` — optional screenshot capture guidance
+- `architecture.md` — project structure and technical overview
+- `developer-guide.md` — practical development notes
+- `use-cases.md` — suggested public/demo uses
+- `ecosystem-positioning.md` — how the repo fits into the ASR proof system
+- `screenshots-manifest.md` — screenshot inventory notes
+- `history/` — archived checkpoints, polish notes and earlier readiness notes
 
-Supplementary notes:
+## Repo role
 
-- `use-cases.md` — practical uses for the starter foundation
-- `proposal-usage.md` — how the demo can support sales/proposal work
-- `showcase-roadmap.md` — future profile/demo ideas
+The Starter Kit is the ASR **Foundation Proof** asset. It demonstrates how a clear, maintainable website foundation can support small-business enquiry generation, service explanation and trust building.

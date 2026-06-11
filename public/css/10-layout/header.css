@@ -6,7 +6,6 @@
   background: var(--asr-red);
   border-bottom: 3px solid var(--asr-gold);
   padding: 0.5rem 0;
-  color: var(--asr-white);
 }
 
 .site-header .inner {

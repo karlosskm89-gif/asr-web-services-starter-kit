@@ -12,7 +12,7 @@
   title: typeof title !== "undefined" ? title : "ASR Web Services Starter Kit",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
-    : "Profile-driven Express and EJS starter system for small-business websites and enquiry-focused demos.",
+    : "Example-driven Express and EJS starter system for small-business websites and enquiry-focused demos.",
   builder,
   currentPath: "starter-kit",
   body: `
@@ -25,19 +25,19 @@
       <div class="hero-badges">
         <span>Express</span>
         <span>EJS</span>
-        <span>Profile-driven content</span>
+        <span>Example-driven content</span>
         <span>Modular CSS</span>
       </div>
     </div>
     <aside class="starter-panel">
-      <h2>Current demo profile</h2>
+      <h2>Current active example</h2>
       <p><code>TEMPLATE_PROFILE=${builder?._profileKey || "asrWebServices"}</code></p>
       <p>Switch the profile value to preview a different business type while keeping the same routes, views and maintainable structure.</p>
     </aside>
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt collapsible-section">
   <div class="container">
     <div class="section-heading">
       <h2>What this starter kit gives a buyer</h2>
@@ -45,13 +45,13 @@
     </div>
     <div class="grid services-grid">
       <div class="service-card"><h3>Reusable page structure</h3><p>Shared EJS layouts and partials power home, about, services, portfolio, FAQ, testimonials, and contact pages.</p></div>
-      <div class="service-card"><h3>Profile-driven content</h3><p>Business identity, page copy, services, projects, testimonials, SEO text, and theme choices come from profile modules.</p></div>
+      <div class="service-card"><h3>Example-driven content</h3><p>Business identity, page copy, services, projects, testimonials, SEO text, and theme choices come from profile modules.</p></div>
       <div class="service-card"><h3>Inquiry-ready foundation</h3><p>Includes contact validation, CSRF protection, rate limiting, security headers, and deployment-friendly health checks.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section collapsible-section">
   <div class="container">
     <div class="section-heading">
       <h2>Example profile families</h2>
@@ -62,7 +62,7 @@
         <div class="project-card starter-profile-card">
           <div class="project-card-body">
             <h3>${group.title}</h3>
-            <p>${group.items.filter(item => profiles.includes(item)).join(", ") || "Demo profiles available in modules/"}</p>
+            <p>${group.items.filter(item => profiles.includes(item)).join(", ") || "Additional examples available in modules/"}</p>
           </div>
         </div>
       `).join("")}
@@ -71,7 +71,7 @@
 </section>
 
 
-<section class="section">
+<section class="section collapsible-section">
   <div class="container starter-docs-grid">
     <div>
       <p class="eyebrow">Built from real project patterns</p>
@@ -91,7 +91,7 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt collapsible-section">
   <div class="container starter-docs-grid">
     <div>
       <h2>Ready for public portfolio review</h2>

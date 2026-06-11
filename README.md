@@ -1,43 +1,45 @@
 # ASR Web Services Starter Kit
 
-Public-safe Express/EJS starter demo for practical small-business websites: clear pages, reusable layouts, profile-driven content, safe enquiry handling and portfolio-ready presentation.
+A public showcase repository demonstrating the website foundation ASR Web Services uses for small businesses and service organisations.
 
-Live demo: https://asr-web-services-starter-kit.onrender.com
+This project shows how a clear, maintainable website structure can support enquiry generation, service explanation, trust building and future growth.
 
 ## What this demonstrates
 
-- Express 5 + EJS route/view structure
-- Reusable layouts, partials and CSS themes
-- Profile switching via `TEMPLATE_PROFILE`
-- Public pages for common service-business needs
-- Contact/enquiry flow foundations with validation and CSRF
-- Helmet, compression, rate limiting and health checks
-- Page-specific SEO/canonical helpers
-- Public-safe fictional profile examples through the Business Profile Lab
-- Compressed public assets and compact favicon
+- Responsive public pages for service-led businesses
+- Reusable layouts and content structure
+- Enquiry-focused contact flows
+- Industry-specific examples and business scenarios
+- Public-safe demo content suitable for portfolio use
+- A maintainable foundation that can later connect to deeper operational tools
 
 ## Ecosystem role
 
-This is Demo Repo 1 in the ASR proof ecosystem. It shows the public website foundation. The Operational Systems Demo shows the workflow/admin layer that can sit behind a business site.
+This repository represents **Foundation Proof** within the ASR ecosystem.
 
-## Business Profile Lab
+Related proof assets:
 
-The profile lab previews the same build foundation shaped around fictional, public-safe businesses. These examples are labelled as demonstrations and are not presented as real clients.
+- ForwardSteps — Operational Proof
+- Aid Cancer Treatment — Relationship Proof
+- Operational Systems Demo — Workflow Proof
+- ASR Website — Marketing Proof
+
+## Live demo
+
+https://asr-web-services-starter-kit.onrender.com
+
+## Running locally
+
+```bash
+npm install
+npm start
+```
+
+Then open:
 
 ```text
-/showcase-mode
-/showcase-mode/:profileKey
+http://localhost:3000
 ```
-
-## Profile switching
-
-Default profile:
-
-```env
-TEMPLATE_PROFILE=asrWebServices
-```
-
-Example alternatives include `plasterer`, `restaurant`, `photographer`, `lifeCoach` and `charity`. Changing the profile swaps identity, copy, services, sample projects, theme key and metadata while keeping the shared routes/views.
 
 ## Main routes
 
@@ -45,42 +47,19 @@ Example alternatives include `plasterer`, `restaurant`, `photographer`, `lifeCoa
 /                         Home
 /about                    About
 /services                 Services
-/portfolio                Proof of work
-/starter-kit              Starter kit overview
-/showcase-mode            Business profile selector
-/showcase-mode/:profile   Profile-driven demo preview
-/testimonials             Client signals
-/faqs                     Practical questions
-/contact                  Contact form
+/portfolio                Portfolio examples
+/testimonials             Testimonials
+/faqs                     FAQ
+/contact                  Contact
+/showcase-mode            Industry examples
+/showcase-mode/:profile   Industry example preview
 /healthz                  Health check
 ```
 
-## Local development
+## Public-safe boundary
 
-```bash
-npm install
-cp .env.example .env
-npm start
-npm test
-```
+This repo uses fictional/demo content and does not contain private client material.
 
-Open `http://localhost:3000`.
+## Notes
 
-For automated smoke tests, set `NODE_ENV=test` or `ASR_TEST_BYPASS_RATE_LIMIT=true` to bypass the global limiter.
-
-## Public-safety notes
-
-This repo contains no production client code, real client data, credentials, private admin systems or live database records. Large source PNG logo files are excluded from the release package; runtime assets use compressed WebP files and a compact generated favicon.
-
-## Docs
-
-The `docs/` folder contains short supporting notes for architecture, profile switching, public-safe fictionalisation, screenshot capture and portfolio review. The docs are intentionally lightweight so the repo remains launch-clean.
-
-## Related projects
-
-- Main ASR website: https://asrweb.ie
-- Operational Systems Demo: https://github.com/karlosskm89-gif/operational-systems-demo
-
-## Licence
-
-MIT — see `LICENSE`.
+Supporting documentation and historical cleanup notes are stored in `/docs`.
