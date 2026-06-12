@@ -19,9 +19,9 @@
 <section class="section starter-hero">
   <div class="container starter-grid">
     <div>
-      <p class="eyebrow">ASR technical showcase</p>
+      <p class="eyebrow">Foundation proof</p>
       <h1>ASR Web Services Starter Kit</h1>
-      <p class="lead">A practical Express/EJS foundation for service-business websites, enquiry flows and reusable public demos.</p>
+      <p class="lead">A public-safe proof asset showing reusable website foundations, industry examples, enquiry-flow structure and maintainable presentation patterns.</p>
       <div class="hero-badges">
         <span>Express</span>
         <span>EJS</span>
@@ -30,9 +30,9 @@
       </div>
     </div>
     <aside class="starter-panel">
-      <h2>Current active example</h2>
-      <p><code>TEMPLATE_PROFILE=${builder?._profileKey || "asrWebServices"}</code></p>
-      <p>Switch the profile value to preview a different business type while keeping the same routes, views and maintainable structure.</p>
+      <h2>Current public-safe example</h2>
+      <p><strong>${builder?._profileKey || "asrWebServices"}</strong></p>
+      <p>This demo keeps one maintainable foundation underneath and lets the public-facing example change on top.</p>
     </aside>
   </div>
 </section>
@@ -54,15 +54,15 @@
 <section class="section collapsible-section">
   <div class="container">
     <div class="section-heading">
-      <h2>Example profile families</h2>
-      <p>A quick look at the business types this structure can support without rebuilding from scratch.</p>
+      <h2>Industry example families</h2>
+      <p>A quick look at the kinds of service organisations this structure can support without rebuilding from scratch.</p>
     </div>
     <div class="grid project-grid">
       ${profileGroups.map(group => `
         <div class="project-card starter-profile-card">
           <div class="project-card-body">
             <h3>${group.title}</h3>
-            <p>${group.items.filter(item => profiles.includes(item)).join(", ") || "Additional examples available in modules/"}</p>
+            <p>${group.items.filter(item => profiles.includes(item)).join(", ") || "More examples can be added when needed"}</p>
           </div>
         </div>
       `).join("")}
@@ -75,9 +75,9 @@
   <div class="container starter-docs-grid">
     <div>
       <p class="eyebrow">Built from real project patterns</p>
-      <h2>Technical starter first, client proof elsewhere</h2>
+      <h2>Demo foundation here, client proof on ASR</h2>
       <p>This starter stays focused on the reusable build. Full ASR case studies belong on the ASR website, where buyers can read the project story without mixing it into the codebase.</p>
-      <a class="btn primary" href="/portfolio">View portfolio examples</a>
+      <a class="btn primary" href="https://asrweb.ie/portfolio" target="_blank" rel="noopener">View ASR portfolio</a>
     </div>
     <div class="starter-panel">
       <h3>Why they are separate</h3>
@@ -101,10 +101,10 @@
       <h3>Useful docs</h3>
       <ul class="plain-list">
         <li><code>README.md</code> — public project overview</li>
-        <li><code>docs/profile-switching.md</code> — how profile loading works</li>
+        <li><code>docs/industry-examples.md</code> — how example loading works</li>
         <li><code>docs/public-portfolio-notes.md</code> — what stays public vs private</li>
         <li><code>docs/mockup-fictionalisation.md</code> — how branded mockups should be cleaned before publication</li>
-        <li><a href="/showcase-mode">/showcase-mode</a> — public use cases and mockup strategy</li>
+        <li><a href="/showcase-mode">/showcase-mode</a> — public industry examples and configurator strategy</li>
       </ul>
     </div>
   </div>

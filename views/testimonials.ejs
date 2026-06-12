@@ -3,7 +3,7 @@
 %>
 
 <%- include("./layouts/mainLayout", {
-  title: typeof title !== "undefined" ? title : "Client Signals",
+  title: typeof title !== "undefined" ? title : "Proof Notes",
   metaDescription: typeof metaDescription !== "undefined"
     ? metaDescription
     : (builder?.seo?.testimonialsDescription || builder?.seo?.metaDescription || ""),
@@ -12,7 +12,8 @@
   body: `
 <section class="section">
   <div class="container">
-    <h1>Client Signals</h1>
+    <h1>Proof Notes</h1>
+    <p class="lead">Public-safe trust and testimonial-style content used to show where client evidence belongs in a practical service-business website.</p>
 
     <div class="testimonials-list">
       ${testimonials.length

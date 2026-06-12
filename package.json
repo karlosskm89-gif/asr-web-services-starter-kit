@@ -1,7 +1,7 @@
 {
   "name": "asr-web-services-starter-kit",
   "version": "1.0.0",
-  "description": "Public-safe Express/EJS starter kit for service-business websites and operational workflow demos.",
+  "description": "Public-safe ASR starter kit for service-business website foundations, industry examples and enquiry-driven pages.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -15,7 +15,6 @@
     "starter-kit",
     "small-business",
     "service-business",
-    "profile-lab",
     "portfolio",
     "public-safe-demo",
     "website-foundation",

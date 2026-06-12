@@ -38,7 +38,7 @@ function designQueryString(design = {}) {
 
 function ensureBuilder() {
   if (!builder) {
-    throw new AppError(500, "Profile configuration is missing", {
+    throw new AppError(500, "Example configuration is missing", {
       isOperational: false,
     });
   }
@@ -79,7 +79,7 @@ function profileSummary(key) {
       profile.hero?.subheadline ||
       profile.about?.intro ||
       profile.seo?.metaDescription ||
-      "Example-driven demo variant.",
+      "Public-safe industry example.",
     badges: Array.isArray(profile.hero?.badges) ? profile.hero.badges : [],
     logo: profile.brandLogo || profile.heroImage || null,
   };
@@ -102,8 +102,10 @@ function showcaseView(extra = {}) {
 
 exports.home = (req, res) => {
   ensureBuilder();
-  const { title, metaDescription } = seo("home");
-  res.render("home", baseView({ title, metaDescription }));
+  res.render("home", baseView({
+    title: "ASR Service Starter Kit Demo",
+    metaDescription: "Public-safe ASR proof asset showing reusable website foundations, industry examples and enquiry-flow structure."
+  }));
 };
 
 exports.about = (req, res) => {
@@ -120,8 +122,10 @@ exports.services = (req, res) => {
 
 exports.portfolio = (req, res) => {
   ensureBuilder();
-  const { title, metaDescription } = seo("portfolio");
-  res.render("portfolio", baseView({ title, metaDescription }));
+  res.render("portfolio", baseView({
+    title: "Example Pages | ASR Starter Kit",
+    metaDescription: "Example pages inside the ASR Service Starter Kit proof asset. For live client proof and ASR portfolio material, use asrweb.ie/portfolio."
+  }));
 };
 
 
@@ -138,7 +142,7 @@ exports.showcaseMode = (req, res) => {
     designQuery: designQueryString(design),
     title: "Industry Examples | ASR Web Services Starter Kit",
     metaDescription:
-      "Explore example-driven demo variants inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
+      "Explore public-safe industry examples inside the ASR Web Services Starter Kit while keeping ASR as the core identity.",
     currentPath: "showcase-mode",
     profiles: allShowcaseProfiles(),
     asrProfile: profileSummary("asrWebServices"),
@@ -152,7 +156,7 @@ exports.showcaseProfile = (req, res, next) => {
   const demoProfile = profiles[key];
 
   if (!demoProfile || key === "asrWebServices") {
-    return next(new AppError(404, "Showcase profile not found", {
+    return next(new AppError(404, "Industry example not found", {
       isOperational: true,
       meta: { profileKey: key },
     }));
@@ -173,7 +177,7 @@ exports.showcaseProfile = (req, res, next) => {
     metaDescription:
       selectedProfile.seo?.metaDescription ||
       selectedProfile.hero?.subheadline ||
-      "Example-driven demo variant inside the ASR Web Services Starter Kit.",
+      "Public-safe industry example inside the ASR Web Services Starter Kit.",
     currentPath: "showcase-mode",
     profiles: allShowcaseProfiles(),
     selectedKey: key,
@@ -211,7 +215,7 @@ exports.starterKit = (req, res) => {
   ensureBuilder();
   res.render("starter-kit", baseView({
     title: "ASR Web Services Starter Kit",
-    metaDescription: "Example-driven Express and EJS starter system for small-business websites, booking flows, and enquiry-driven demos.",
+    metaDescription: "Public-safe Express and EJS starter system for small-business websites, enquiry flows, industry examples and maintainable foundations.",
     currentPath: "starter-kit",
   }));
 };
@@ -229,29 +233,7 @@ exports.contact = (req, res) => {
 //  when rendering contact again on validation fail
 
 exports.contactPost = async (req, res) => {
-  ensureBuilder();
-  const errors = req.validationErrors || [];
-  const { title, metaDescription } = seo("contact");
-
-  if (errors.length > 0) {
-    return res.render("contact", {
-      builder,
-      title,
-      metaDescription,
-      csrfToken: req.csrfToken(),
-      validationErrors: errors,
-      old: req.body,
-    });
-  }
-
-  // Send email
-  await sendMail({
-    to: builder?.emailRecipient || process.env.MAIL_TO,
-    subject: `New contact form submission from ${req.body.name}`,
-    html: contactEmailHtml({ builder, form: req.body }),
-  });
-
-  res.redirect("/success");
+  return res.redirect(303, "https://asrweb.ie/contact");
 };
 
 exports.success = async (req, res) => {

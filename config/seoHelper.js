@@ -8,7 +8,7 @@ const PAGE_LABELS = {
   about: "About",
   services: "Services",
   portfolio: "Portfolio",
-  testimonials: "Client Signals",
+  testimonials: "Proof Notes",
   faqs: "FAQs",
   contact: "Contact",
   success: "Thank You",

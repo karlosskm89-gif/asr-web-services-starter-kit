@@ -52,12 +52,6 @@ app.use("/healthz", healthRoutes);
 // security headers
 app.use(helmet);
 
-// Apply global soft rate-limit (good for templates)
-app.use(rateLimiter);
-
-// Request sanitization
-app.use(sanitize);
-
 // --------------------------------------------------
 // View Engine
 // --------------------------------------------------
@@ -66,6 +60,12 @@ app.set("views", path.join(__dirname, "views"));
 
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
+
+// Apply global soft rate-limit (good for templates)
+app.use(rateLimiter);
+
+// Request sanitization
+app.use(sanitize);
 
 app.use((req, res, next) => {
   const host = req.get("host") || "localhost:3000";

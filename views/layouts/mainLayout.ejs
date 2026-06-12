@@ -6,7 +6,7 @@
   <title><%= title || chromeBuilder?.businessName || builder?.businessName || "ASR Web Services Starter Kit" %></title>
   <meta
     name="description"
-    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>"
+    content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Public-safe ASR starter kit showing adaptable service-business website foundations, industry examples, enquiry paths and maintainable structure.' %>"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow" />
@@ -14,14 +14,14 @@
 
   <meta property="og:site_name" content="ASR Web Services" />
   <meta property="og:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>" />
+  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Public-safe ASR starter kit showing adaptable service-business website foundations, industry examples, enquiry paths and maintainable structure.' %>" />
   <meta property="og:url" content="<%= typeof canonicalUrl !== 'undefined' && canonicalUrl ? canonicalUrl : 'https://asr-web-services-starter-kit.onrender.com/' %>" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= typeof title !== 'undefined' && title ? title + ' | ASR Web Services Starter Kit' : 'ASR Web Services Starter Kit' %>" />
-  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Adaptable small-business website starter kit, Industry Examples and public-safe ASR demo ecosystem.' %>" />
+  <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' && metaDescription ? metaDescription : 'Public-safe ASR starter kit showing adaptable service-business website foundations, industry examples, enquiry paths and maintainable structure.' %>" />
   <meta name="twitter:image" content="https://asr-web-services-starter-kit.onrender.com/img/asr-og-portfolio-mountain-qr.webp" />
   <meta name="twitter:creator" content="@asrweb" />
 
@@ -30,10 +30,13 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/index.css" />
 
-  <!-- Optional module-specific CSS -->
+  <!-- Optional module-specific CSS. Loaded before the final ASR alignment pass. -->
 <% if (typeof pageCss !== "undefined" && pageCss) { %>
   <link rel="stylesheet" href="<%= pageCss %>">
 <% } %>
+
+  <!-- Final ecosystem alignment layer: must remain after every profile/theme stylesheet. -->
+  <link rel="stylesheet" href="/css/30-pages/asr-ecosystem-alignment.css">
 </head>
 <body class="
   profile-<%= builder?._profileKey || 'default' %>
@@ -67,29 +70,26 @@
         </a>
       </div>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="/" class="<%= currentPath === 'home' ? 'active' : '' %>">Home</a>
-        <a href="/about" class="<%= currentPath === 'about' ? 'active' : '' %>">About</a>
-        <a href="/services" class="<%= currentPath === 'services' ? 'active' : '' %>">Services</a>
-        <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Portfolio</a>
-        <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Starter Kit</a>
+      <nav class="main-nav" aria-label="Demo navigation">
+        <a href="/" class="<%= currentPath === 'home' ? 'active' : '' %>">Overview</a>
+        <a href="/starter-kit" class="<%= currentPath === 'starter-kit' ? 'active' : '' %>">Foundation</a>
         <a href="/showcase-mode" class="<%= currentPath === 'showcase-mode' ? 'active' : '' %>">Industry Examples</a>
-        <a href="/testimonials" class="<%= currentPath === 'testimonials' ? 'active' : '' %>">Client Signals</a>
-        <a href="/faqs" class="<%= currentPath === 'faqs' ? 'active' : '' %>">FAQ</a>
-        <a href="/contact" class="<%= currentPath === 'contact' ? 'active' : '' %>">Contact</a>
+        <a href="/portfolio" class="<%= currentPath === 'portfolio' ? 'active' : '' %>">Example Pages</a>
+        <a href="https://asrweb.ie/portfolio" target="_blank" rel="noopener">Back to ASR Portfolio</a>
       </nav>
 
       <div class="header-cta">
-        <% if (chromeBuilder?.phone) { %>
-          <a class="header-phone" href="tel:<%= chromeBuilder.phone %>">
-            Call: <%= chromeBuilder.phone %>
-          </a>
-        <% } else if (chromeBuilder?.ctaButtonText) { %>
-          <a class="header-button" href="/contact"><%= chromeBuilder.ctaButtonText %></a>
-        <% } %>
+        <a class="header-button" href="https://asrweb.ie/contact" target="_blank" rel="noopener">Discuss a real project</a>
       </div>
     </div>
   </header>
+
+  <div class="asr-demo-ribbon" role="note">
+    <div class="container asr-demo-ribbon-inner">
+      <span>Public-safe ASR proof asset: reusable website foundation, industry examples and enquiry-flow structure.</span>
+      <a href="https://asrweb.ie/portfolio" target="_blank" rel="noopener">View ASR portfolio →</a>
+    </div>
+  </div>
 
   <main>
     <%- body %>
@@ -109,38 +109,36 @@
         <% } %>
         <div>
           <strong><%= chromeBuilder?.businessName || "Your Business Name" %></strong>
-          <p>Practical websites and digital systems for real organisations.</p>
+          <p>Public-safe demo of reusable website foundations. The main ASR website remains the sales and contact layer.</p>
           <% if (chromeBuilder?.area) { %><p><%= chromeBuilder.area %></p><% } %>
         </div>
       </div>
 
       <div class="footer-links">
-        <strong>Quick Links</strong>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/starter-kit">Starter Kit</a>
+        <strong>Demo</strong>
+        <a href="/">Overview</a>
+        <a href="/starter-kit">Foundation</a>
         <a href="/showcase-mode">Industry Examples</a>
+        <a href="/portfolio">Example Pages</a>
       </div>
 
       <div class="footer-links">
-        <strong>Resources</strong>
-        <a href="/testimonials">Client Signals</a>
-        <a href="/faqs">FAQ</a>
-        <a href="/contact">Contact</a>
+        <strong>ASR ecosystem</strong>
+        <a href="https://asrweb.ie" target="_blank" rel="noopener">Main ASR website</a>
+        <a href="https://asrweb.ie/portfolio" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://asr-operational-systems-demo.onrender.com/" target="_blank" rel="noopener">Operational demo</a>
       </div>
 
       <div class="footer-links">
-        <strong>Connect</strong>
-        <% if (chromeBuilder?.email) { %><a href="mailto:<%= chromeBuilder.email %>"><%= chromeBuilder.email %></a><% } %>
-        <% if (chromeBuilder?.website) { %><a href="<%= chromeBuilder.website %>"><%= chromeBuilder.website.replace(/^https?:\/\//, '') %></a><% } %>
-        <% if (chromeBuilder?.area) { %><span><%= chromeBuilder.area %></span><% } %>
+        <strong>Real project enquiries</strong>
+        <a href="https://asrweb.ie/contact" target="_blank" rel="noopener">Contact ASR</a>
+        <a href="https://asrweb.ie/services" target="_blank" rel="noopener">ASR services</a>
+        <a href="https://asrweb.ie/case-studies" target="_blank" rel="noopener">Case studies</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>Built by ASR Web Services • Practical. Maintainable. Purpose-built.</p>
+      <p>ASR foundation proof asset • Practical. Maintainable. Purpose-built.</p>
       <p class="footer-copy">
         &copy; <%= new Date().getFullYear() %>
         <%= chromeBuilder?.businessName || "Your Business Name" %>. All rights reserved.
@@ -150,7 +148,7 @@
         <small class="footer-profile-meta">
           <% if (builder?._profileKey) { %>
             <span class="profile-label">
-              Profile:
+              Active example:
               <strong><%= builder._profileKey %></strong>
             </span>
           <% } %>

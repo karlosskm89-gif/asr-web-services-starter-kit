@@ -6,7 +6,7 @@ This repo is now intended to be a complete public-facing foundation rather than 
 
 - Public README
 - Starter Kit explanation page
-- Profile-switching documentation
+- Industry example documentation
 - Showcase listing page
 - Five fictional showcase detail pages
 - Case-study listing page

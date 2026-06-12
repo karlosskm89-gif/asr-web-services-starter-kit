@@ -8,7 +8,7 @@ module.exports = {
   website: "https://asrweb.ie",
   baseUrl: "/",
   themeKey: "corporate",
-  ctaButtonText: "Start a Project",
+  ctaButtonText: "View ASR Portfolio",
   brandLogo: "/assets/asr_assets/ASR_Logo_Transparent.webp",
   heroImage: "/assets/asr_assets/ASR_logo.webp",
   featureImage: "/assets/asr_assets/ASR_logo+mountainsFramed.webp",
@@ -134,7 +134,7 @@ module.exports = {
     },
   ],
   about: {
-    heading: "About ASR Web Services",
+    heading: "About this ASR example",
     intro:
       "ASR Web Services is a small Cork-based web studio focused on practical websites and digital systems for service businesses, charities, wellness providers, and independent organisations.",
     story:
@@ -160,13 +160,13 @@ module.exports = {
     metaDescription:
       "ASR Web Services builds practical websites, booking systems, inquiry flows, and operational digital infrastructure for service businesses and organisations.",
     aboutDescription:
-      "About ASR Web Services: practical websites, booking systems, operational workflows, and long-term digital support from Cork, Ireland.",
+      "About this ASR example: practical websites, booking systems, operational workflows, and long-term digital support from Cork, Ireland.",
     servicesDescription:
       "Service-business websites, booking and inquiry flows, admin tooling, content systems, and long-term digital support.",
     portfolioDescription:
       "ASR Web Services portfolio concepts showing booking systems, content workflows, operational dashboards, and starter-kit structures.",
     contactDescription:
-      "Contact ASR Web Services to discuss practical websites, booking systems, and digital infrastructure for service businesses and organisations.",
+      "Use main ASR contact Web Services to discuss practical websites, booking systems, and digital infrastructure for service businesses and organisations.",
     faqDescription:
       "Frequently asked questions about the ASR Web Services starter kit and practical digital systems approach.",
     testimonialsDescription:

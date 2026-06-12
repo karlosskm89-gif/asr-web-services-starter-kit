@@ -1,4 +1,4 @@
-## Showcase Mode profile-switching refactor
+## Showcase Mode industry examples refactor
 
 - Reframed the old showcase layer as Showcase Mode.
 - Kept ASR Web Services as the core/default identity.
@@ -54,7 +54,7 @@
 - Added showcase data in `data/showcaseItems.js`.
 - Added SVG preview assets for showcase cards and detail pages.
 - Added screenshot folder guidance for future README images.
-- Expanded public documentation around profile switching, fictionalisation, public/private boundaries, and showcase strategy.
+- Expanded public documentation around industry examples, fictionalisation, public/private boundaries, and showcase strategy.
 
 ## Initial public-ready release
 

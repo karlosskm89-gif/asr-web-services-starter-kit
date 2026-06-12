@@ -40,6 +40,6 @@ For GitHub presentation, use 3–5 screenshots only:
 2. Mobile homepage/header
 3. Services or portfolio grid
 4. Contact form
-5. Starter kit/profile-switching explanation page
+5. Starter kit/industry examples explanation page
 
 Keep screenshots focused and clean. The goal is to show structure, not every page.

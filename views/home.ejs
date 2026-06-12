@@ -17,8 +17,8 @@
 <section class="hero hero-split">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <h1>${hero.headline || "Welcome to Our Website"}</h1>
-      <p>${hero.subheadline || "Professional services you can rely on."}</p>
+      <h1>ASR Service Starter Kit Demo</h1>
+      <p>Public-safe proof of reusable website foundations, industry examples and enquiry-flow structure.</p>
 
       ${hero.badges?.length ? `
         <div class="hero-badges">
@@ -27,8 +27,8 @@
       ` : ""}
 
       <div class="hero-ctas">
-        ${builder?.phone ? `<a href="tel:${builder.phone}" class="btn primary">Call Now</a>` : ""}
-        ${builder?.ctaButtonText ? `<a href="/contact" class="btn secondary">${builder.ctaButtonText}</a>` : ""}
+        <a href="/starter-kit" class="btn primary">View foundation</a>
+        <a href="/showcase-mode" class="btn secondary">Explore examples</a>
       </div>
     </div>
 
@@ -60,17 +60,17 @@ ${featureImage ? `
 <section class="section contact-feature-section">
   <div class="container contact-feature-grid">
     <div class="contact-feature-card">
-      <h2>Got questions?</h2>
-      <p>Find answers about the starter kit, profile switching, and the practical service-business structure behind this demo.</p>
-      <a href="/faqs" class="btn secondary">View FAQ</a>
+      <h2>Need the actual ASR site?</h2>
+      <p>This is a demo environment. For services, case studies and project enquiries, use the main ASR website.</p>
+      <a href="https://asrweb.ie" class="btn secondary">Open asrweb.ie</a>
     </div>
     <figure class="contact-feature-image">
       <img src="${featureImage}" alt="ASR mountain frame visual">
     </figure>
     <div class="contact-feature-card">
-      <h2>Get in touch</h2>
-      <p>Have a project in mind or want to adapt this starter structure for a real organisation?</p>
-      <a href="/contact" class="btn primary">Contact ASR</a>
+      <h2>Want to discuss a real project?</h2>
+      <p>Use the main ASR contact route so this demo stays focused on proof, not sales.</p>
+      <a href="https://asrweb.ie/contact" class="btn primary">Contact ASR</a>
     </div>
   </div>
 </section>

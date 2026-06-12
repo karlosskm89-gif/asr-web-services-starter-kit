@@ -1,3 +1,9 @@
+# Historical Note — Superseded Terminology Cleaned
+
+This file is retained for project history only. Terms such as “Industry Examples / Configurator (obsolete: Industry Examples / Configurator) (obsolete term; now Industry Examples / Configurator)”, “Proof Notes / Industry Signals (obsolete: Proof Notes / Industry Signals) (obsolete term; now proof notes / industry signals)”, “Current industry example”, and “Industry examples available” were experimental labels. The current public language is “Industry Examples”, “Configurator”, and “proof asset”.
+
+---
+
 # RC Repair Notes — ASR Web Services Starter Kit
 
 Applied June 2026:
@@ -23,7 +29,7 @@ Validation:
 - Recompressed ASR WebP brand assets.
 - Slimmed README/docs so the public repo reads as release support, not an internal archive.
 - Added explicit test-mode rate-limit bypass via `NODE_ENV=test`, `BYPASS_RATE_LIMIT=true`, or `ASR_TEST_BYPASS_RATE_LIMIT=true`.
-- Lightly de-genericised remaining headings: Proof of Work, Client Signals, Practical Questions and Business Profile Lab.
+- Lightly de-genericised remaining headings: Proof of Work, Proof Notes / Industry Signals (obsolete: Proof Notes / Industry Signals) (obsolete term; now proof notes / industry signals), Practical Questions and Business Industry Examples / Configurator (obsolete: Industry Examples / Configurator) (obsolete term; now Industry Examples / Configurator).
 
 ## Final RC hygiene repair pass
 

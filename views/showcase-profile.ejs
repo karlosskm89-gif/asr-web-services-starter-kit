@@ -21,11 +21,11 @@
     <div>
       <p class="eyebrow">Industry Examples</p>
       <strong>${builder?.businessName || "Industry example"}</strong>
-      <span>This is a fictional/public-safe profile rendered inside the ASR starter-kit shell.</span>
+      <span>This is a fictional/public-safe industry example rendered inside the ASR starter-kit foundation.</span>
     </div>
     <div class="showcase-mode-actions">
-      <a href="/showcase-mode" class="text-link">Switch profile</a>
-      <a href="/" class="text-link">Return to ASR core</a>
+      <a href="/showcase-mode" class="text-link">Switch example</a>
+      <a href="https://asrweb.ie" target="_blank" rel="noopener" class="text-link">Main ASR website</a>
     </div>
   </div>
 </section>
@@ -33,7 +33,7 @@
 <section class="hero hero-split showcase-profile-preview">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Active profile: ${builder?._profileKey || ""}</p>
+      <p class="eyebrow">Active example: ${builder?._profileKey || ""}</p>
       <h1>${hero.headline || builder?.businessName || "Industry example"}</h1>
       <p>${hero.subheadline || builder?.seo?.metaDescription || "Example-driven example content."}</p>
 
@@ -65,7 +65,7 @@
       <div class="configurator-groups">
         <div class="configurator-group"><strong>Grid</strong><div class="configurator-options"><a href="?grid=2" data-config-key="grid" data-config-value="2">2 columns</a><a href="?grid=3" data-config-key="grid" data-config-value="3">3 columns</a><a href="?grid=4" data-config-key="grid" data-config-value="4">4 columns</a></div></div>
         <div class="configurator-group"><strong>Cards</strong><div class="configurator-options"><a href="?cards=soft" data-config-key="cards" data-config-value="soft">Soft</a><a href="?cards=sharp" data-config-key="cards" data-config-value="sharp">Sharp</a><a href="?cards=elevated" data-config-key="cards" data-config-value="elevated">Elevated</a></div></div>
-        <div class="configurator-group"><strong>Nav</strong><div class="configurator-options"><a href="?nav=default" data-config-key="nav" data-config-value="default">Top</a><a href="?nav=pill" data-config-key="nav" data-config-value="pill">Pill</a><a href="?nav=underline" data-config-key="nav" data-config-value="underline">Underline</a><a href="?nav=boxed" data-config-key="nav" data-config-value="boxed">Boxed</a><a href="?nav=side" data-config-key="nav" data-config-value="side">Side-style</a><a href="?nav=compact" data-config-key="nav" data-config-value="compact">Compact</a><a href="?nav=condensed" data-config-key="nav" data-config-value="collapsible">Condensed</a></div></div>
+        <div class="configurator-group"><strong>Nav</strong><div class="configurator-options"><a href="?nav=default" data-config-key="nav" data-config-value="default">Top</a><a href="?nav=pill" data-config-key="nav" data-config-value="pill">Pill</a><a href="?nav=underline" data-config-key="nav" data-config-value="underline">Underline</a><a href="?nav=boxed" data-config-key="nav" data-config-value="boxed">Boxed</a><a href="?nav=side" data-config-key="nav" data-config-value="side">Side-style</a><a href="?nav=compact" data-config-key="nav" data-config-value="compact">Compact</a><a href="?nav=condensed" data-config-key="nav" data-config-value="condensed">Condensed</a></div></div>
         <div class="configurator-group"><strong>Spacing</strong><div class="configurator-options"><a href="?layout=compact" data-config-key="layout" data-config-value="compact">Compact</a><a href="?layout=balanced" data-config-key="layout" data-config-value="balanced">Balanced</a><a href="?layout=spacious" data-config-key="layout" data-config-value="spacious">Spacious</a></div></div>
         <div class="configurator-group"><strong>Background</strong><div class="configurator-options"><a href="?background=clean" data-config-key="background" data-config-value="clean">Clean</a><a href="?background=paper" data-config-key="background" data-config-value="paper">Paper</a><a href="?background=wash" data-config-key="background" data-config-value="wash">Wash</a></div></div>
         <div class="configurator-group"><strong>Fonts</strong><div class="configurator-options"><a href="?font=system" data-config-key="font" data-config-value="system">System</a><a href="?font=serif" data-config-key="font" data-config-value="serif">Serif headings</a><a href="?font=compact" data-config-key="font" data-config-value="compact">Compact</a></div></div>
@@ -114,14 +114,14 @@ ${projects?.length ? `
 <details class="section collapsible-section" open>
   <div class="container starter-docs-grid">
     <div>
-      <h2>Profile-switching proof</h2>
+      <h2>Industry example proof</h2>
       <p>
         This page is not a separate hard-coded website. It is the same starter-kit architecture
-        rendering a different profile object. That is the core idea behind Industry Examples.
+        rendering a different public-safe content object. That is the core idea behind Industry Examples.
       </p>
     </div>
     <aside class="starter-panel">
-      <h3>Other profiles</h3>
+      <h3>Other examples</h3>
       <ul class="plain-list">
         ${profileList.slice(0, 8).map(profile => `
           <li>
@@ -131,7 +131,7 @@ ${projects?.length ? `
           </li>
         `).join("")}
       </ul>
-      <a class="text-link" href="/showcase-mode">View all profiles →</a>
+      <a class="text-link" href="/showcase-mode">View all examples →</a>
     </aside>
   </div>
 </details>

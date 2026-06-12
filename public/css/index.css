@@ -23,14 +23,12 @@
 
 /* 30-pages */
 @import "./30-pages/home.css";
-@import "./30-pages/services.css";
-@import "./30-pages/about.css";
 @import "./30-pages/portfolio.css";
 @import "./30-pages/contact.css";
-@import "./30-pages/faq.css";
 @import "./30-pages/starter-kit.css";
 @import "./30-pages/showcase.css";
 @import "./30-pages/configurator.css";
+
 
 /* 99-responsive */
 @import "./99-responsive/responsive-layout.css";

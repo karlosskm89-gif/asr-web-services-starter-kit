@@ -1,0 +1,249 @@
+/*
+  ASR Ecosystem Alignment Layer
+  --------------------------------
+  Loaded last by mainLayout.ejs.
+
+  Purpose:
+  - Keep the Starter Kit visibly inside the ASR ecosystem.
+  - Preserve industry/theme variation without letting profiles behave like a second ASR website.
+  - Apply the proof-asset framing now expected by the ASR Operating Manual.
+
+  This v15 version replaces the older override-heavy lock with normal cascade rules.
+  It is intentionally last in the stylesheet order, so priority override declarations are no longer needed.
+*/
+
+html,
+body {
+  background: var(--asr-parchment-deep);
+  color: var(--asr-blue);
+}
+
+body.bg-paper,
+body.bg-clean,
+body.bg-wash {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(244, 197, 41, 0.16), transparent 30rem),
+    linear-gradient(180deg, #fffdf7 0%, #fff8e0 100%);
+}
+
+/* Header and demo ribbon */
+.site-header {
+  background: var(--asr-red);
+  border-bottom: 4px solid var(--asr-gold);
+  color: #fff;
+}
+
+.header-inner {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.brand-link,
+.brand-name,
+.main-nav a {
+  color: #fff;
+}
+
+.brand-area {
+  color: var(--asr-gold-light);
+}
+
+.site-header .brand-area::after {
+  content: " • public-safe demo";
+  font-weight: 700;
+}
+
+.brand-logo,
+.footer-logo {
+  border-radius: 0.35rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.main-nav a {
+  border-radius: 999px;
+  padding: 0.32rem 0.65rem;
+}
+
+.main-nav a.active,
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--asr-gold-light);
+}
+
+.asr-demo-ribbon {
+  background: var(--asr-gold-light);
+  border-top: 3px solid var(--asr-gold, #d8a84f);
+  border-bottom: 1px solid rgba(11, 42, 74, 0.18);
+  color: var(--asr-blue);
+  font-size: 0.95rem;
+}
+
+.asr-demo-ribbon-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0;
+}
+
+.asr-demo-ribbon a {
+  color: var(--asr-red);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Sections */
+.hero,
+.starter-hero,
+.showcase-mode-hero,
+.showcase-profile-preview,
+.hero-banner,
+main > .section:nth-of-type(even),
+.section.alt {
+  background: linear-gradient(135deg, #fffdf7 0%, #fff8e0 100%);
+}
+
+main > .section:nth-of-type(odd) {
+  background: #fffdf7;
+}
+
+.hero h1,
+.section-heading h2,
+h1,
+h2,
+h3,
+.service-card h3,
+.project-card h3,
+.showcase-mode-card h3,
+.starter-panel h2,
+.starter-panel h3,
+.configurator-panel h2 {
+  color: var(--asr-blue);
+  letter-spacing: -0.02em;
+}
+
+.eyebrow,
+.showcase-mode-area,
+.showcase-mode-meta {
+  color: var(--asr-red);
+  font-weight: 800;
+  opacity: 1;
+}
+
+/* Cards and panels */
+.starter-panel,
+.service-card,
+.project-card,
+.testimonial-card,
+.showcase-mode-card,
+.configurator-panel,
+.hero-visual-card,
+.card,
+.contact-feature-section .contact-feature-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(11, 42, 74, 0.22);
+  border-top: 4px solid rgba(244, 197, 41, 0.78);
+  border-radius: 0.9rem;
+  box-shadow: 0 14px 32px rgba(11, 42, 74, 0.10);
+  color: var(--asr-blue);
+}
+
+/* Buttons and links */
+.btn,
+.btn.primary,
+.header-button,
+button[type="submit"] {
+  background: var(--asr-red);
+  border-color: var(--asr-red);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: var(--asr-blue);
+  border-color: rgba(28, 41, 90, 0.22);
+}
+
+.text-link {
+  color: var(--asr-blue);
+}
+
+/* Configurator */
+.configurator-panel {
+  border-left: 6px solid var(--asr-gold);
+  margin-top: 1rem;
+}
+
+.configurator-group strong {
+  color: var(--asr-blue);
+}
+
+.configurator-options a {
+  background: #fff;
+  border: 1px solid rgba(28, 41, 90, 0.20);
+  color: var(--asr-blue);
+  text-decoration: none;
+}
+
+.configurator-options a[aria-current="true"],
+.configurator-options a.is-active,
+.configurator-options a:hover {
+  background: var(--asr-blue);
+  border-color: var(--asr-blue);
+  color: #fff;
+}
+
+/* Badges and tags */
+.tag-list li,
+.hero-badges span {
+  background: var(--asr-gold-light);
+  border: 1px solid rgba(244, 197, 41, 0.85);
+  color: var(--asr-blue);
+}
+
+/* Grids */
+.showcase-mode-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.showcase-mode-card {
+  padding: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--asr-blue);
+  color: #fff;
+}
+
+.site-footer a,
+.site-footer p,
+.footer-bottom {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.site-footer a:hover {
+  color: var(--asr-gold-light);
+}
+
+@media (max-width: 860px) {
+  .asr-demo-ribbon-inner,
+  .header-inner {
+    width: min(1120px, calc(100% - 2rem));
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .main-nav a {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .showcase-mode-grid {
+    grid-template-columns: 1fr;
+  }
+}
