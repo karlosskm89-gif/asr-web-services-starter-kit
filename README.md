@@ -56,10 +56,50 @@ http://localhost:3000
 /healthz                  Health check
 ```
 
+## Screenshots
+
+### Homepage
+
+![Homepage](screenshots/homepage.png)
+
+### Services
+
+![Services](screenshots/services.png)
+
+### Industry Example
+
+![Industry Example](screenshots/showcase.png)
+
+### Contact Flow
+
+![Contact](screenshots/contact.png)
 ## Public-safe boundary
 
 This repo uses fictional/demo content and does not contain private client material.
 
+## Technology
+
+- Node.js
+- Express
+- EJS
+- HTML
+- CSS
+- JavaScript
+
+## Architecture
+
+This project follows a modular Express/EJS structure:
+
+config/
+controllers/
+core/
+data/
+modules/
+public/
+routes/
+views/
+
+The structure is designed to remain maintainable as projects grow while avoiding unnecessary complexity.
 ## Notes
 
 Supporting documentation and historical cleanup notes are stored in `/docs`.
