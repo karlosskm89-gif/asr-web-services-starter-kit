@@ -1,6 +1,6 @@
 # ASR Web Services Starter Kit
 
-A public proof-asset repository demonstrating reusable website foundations ASR Web Services can use for small businesses and service organisations.
+A public showcase repository demonstrating the website foundation ASR Web Services uses for small businesses and service organisations.
 
 This project shows how a clear, maintainable website structure can support enquiry generation, service explanation, trust building and future growth.
 
@@ -41,22 +41,66 @@ Then open:
 http://localhost:3000
 ```
 
-## Main proof routes
+## Main routes
 
 ```text
-/                         Demo overview
-/starter-kit              Foundation proof
-/showcase-mode            Industry examples and configurator
-/showcase-mode/:example   Public-safe industry example preview
-/portfolio                Example pages within the demo
+/                         Home
+/about                    About
+/services                 Services
+/portfolio                Portfolio examples
+/testimonials             Testimonials
+/faqs                     FAQ
+/contact                  Contact
+/showcase-mode            Industry examples
+/showcase-mode/:profile   Industry example preview
 /healthz                  Health check
 ```
 
-The demo keeps older page routes available where useful, but primary navigation should not behave like a second ASR website. Real services, contact and case studies live on https://asrweb.ie.
+## Screenshots
+
+### Homepage
+
+![Homepage](screenshots/starte-kit-hompage-hero.png)
+
+### Configurator
+
+![configurator](screenshots/starte-kit-sample-nonprofit-with-configurator.png)
+
+### Industry Example
+
+![Industry Example](screenshots/starter-kit-industry examples-hero.png)
+
+### Sample Business Flow
+
+![sample non-profit](screenshots/starte-kit-sample-nonprofit-with-configurator.png)
 
 ## Public-safe boundary
 
 This repo uses fictional/demo content and does not contain private client material.
+
+## Technology
+
+- Node.js
+- Express
+- EJS
+- HTML
+- CSS
+- JavaScript
+
+## Architecture
+
+This project follows a modular Express/EJS structure:
+
+config/
+controllers/
+core/
+data/
+modules/
+public/
+routes/
+views/
+
+The structure is designed to remain maintainable as projects grow while avoiding unnecessary complexity.
 
 ## Notes
 
